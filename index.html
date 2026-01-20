@@ -1,0 +1,307 @@
+import React, { useState, useEffect } from 'react';
+import { Check, Clock, TrendingDown, Truck, Shield, Phone } from 'lucide-react';
+
+export default function FreshlyLanding() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const products = [
+    { name: 'Fresh Vegetables', icon: '🥬' },
+    { name: 'Premium Chicken', icon: '🍗' },
+    { name: 'Farm Eggs', icon: '🥚' },
+    { name: 'Spices & Herbs', icon: '🌿' },
+    { name: 'Dairy Products', icon: '🧈' },
+    { name: 'Seafood', icon: '🦐' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Navigation */}
+      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="text-3xl font-bold">
+            <span className="text-emerald-600">Fresh</span>
+            <span className="text-slate-800">ly</span>
+          </div>
+          <div className="hidden md:flex gap-8 items-center">
+            <a href="#products" className="text-slate-700 hover:text-emerald-600 transition-colors">Products</a>
+            <a href="#pricing" className="text-slate-700 hover:text-emerald-600 transition-colors">Pricing</a>
+            <a href="#about" className="text-slate-700 hover:text-emerald-600 transition-colors">About</a>
+            <button className="bg-emerald-600 text-white px-6 py-2.5 rounded-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-emerald-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+              <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                Trusted by 500+ Restaurants
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+                Stop Managing <span className="text-emerald-600">4 Vendors.</span> Start Winning.
+              </h1>
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+                One supplier. All ingredients. Same-day delivery. Wholesale prices. 24-hour credit terms. Your kitchen's new best friend.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <button className="bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                  Request Demo
+                </button>
+                <button className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-emerald-600 hover:text-emerald-600 transition-all">
+                  <Phone className="inline mr-2" size={20} />
+                  Call Now
+                </button>
+              </div>
+
+              <div className="flex gap-8 text-sm text-slate-600">
+                <div className="flex items-center gap-2">
+                  <Check className="text-emerald-600" size={20} />
+                  <span>No contracts</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="text-emerald-600" size={20} />
+                  <span>Cancel anytime</span>
+                </div>
+              </div>
+            </div>
+
+            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
+              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-100">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Your Daily Savings</h3>
+                  <p className="text-slate-600">Average restaurant saves</p>
+                </div>
+                <div className="text-center mb-6">
+                  <div className="text-5xl font-bold text-emerald-600 mb-2">₨45,000</div>
+                  <div className="text-slate-600">per month</div>
+                </div>
+                <div className="space-y-4 border-t pt-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-600">Time saved weekly</span>
+                    <span className="font-semibold text-slate-900">8+ hours</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-600">Vendors reduced from</span>
+                    <span className="font-semibold text-slate-900">4 to 1</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-slate-600">Credit period</span>
+                    <span className="font-semibold text-emerald-600">24 hours</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Problem Section */}
+      <section className="py-20 px-6 bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">The Old Way is Costing You</h2>
+            <p className="text-slate-300 text-lg">Every day you waste managing multiple vendors</p>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              { title: '4+ Vendors', desc: 'Different delivery times, quality issues' },
+              { title: 'No Credit', desc: 'Cash on delivery drains working capital' },
+              { title: 'High Prices', desc: 'Paying retail when you need wholesale' },
+              { title: 'Time Wasted', desc: '2+ hours daily managing suppliers' }
+            ].map((item, i) => (
+              <div key={i} className="bg-slate-800 p-6 rounded-xl border-2 border-red-500/20 hover:border-red-500/40 transition-all">
+                <div className="text-red-500 text-4xl font-bold mb-2">✗</div>
+                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                <p className="text-slate-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Section */}
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">The Freshly Advantage</h2>
+            <p className="text-slate-600 text-lg">Everything your kitchen needs. One partner you can trust.</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald-100">
+              <div className="bg-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                <TrendingDown className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Below Wholesale Prices</h3>
+              <p className="text-slate-600 mb-6">Pay less than market rates. Cash payments get you the lowest prices guaranteed. No hidden fees.</p>
+              <div className="bg-white p-4 rounded-lg border border-emerald-200">
+                <div className="text-sm text-slate-600 mb-1">Cash Payment</div>
+                <div className="text-2xl font-bold text-emerald-600">Below Wholesale</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-100">
+              <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                <Clock className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">24-Hour Credit</h3>
+              <p className="text-slate-600 mb-6">Keep your cash flow healthy. Pay tomorrow for today's delivery. Only 3.5% service fee.</p>
+              <div className="bg-white p-4 rounded-lg border border-blue-200">
+                <div className="text-sm text-slate-600 mb-1">Credit Terms</div>
+                <div className="text-2xl font-bold text-blue-600">24 Hours</div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-purple-100">
+              <div className="bg-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                <Truck className="text-white" size={32} />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">One Delivery</h3>
+              <p className="text-slate-600 mb-6">All your supplies in one shipment. Predictable timing. Fresh quality. Every single day.</p>
+              <div className="bg-white p-4 rounded-lg border border-purple-200">
+                <div className="text-sm text-slate-600 mb-1">Delivery Window</div>
+                <div className="text-2xl font-bold text-purple-600">Your Schedule</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section id="products" className="py-20 px-6 bg-slate-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Everything Under One Roof</h2>
+            <p className="text-slate-600 text-lg">From farm to kitchen, we've got you covered</p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {products.map((product, i) => (
+              <div key={i} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-emerald-300">
+                <div className="text-5xl mb-4">{product.icon}</div>
+                <h3 className="text-xl font-bold text-slate-900">{product.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Comparison */}
+      <section id="pricing" className="py-20 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">Simple, Transparent Pricing</h2>
+            <p className="text-slate-600 text-lg">Choose what works for your business</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition-all">
+              <div className="text-sm font-semibold mb-2 opacity-90">BEST VALUE</div>
+              <h3 className="text-3xl font-bold mb-4">Cash Payment</h3>
+              <div className="text-5xl font-bold mb-6">
+                Below<br/>Wholesale
+              </div>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0" size={20} />
+                  <span>Lowest prices guaranteed</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0" size={20} />
+                  <span>Pay on delivery</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0" size={20} />
+                  <span>No additional fees</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0" size={20} />
+                  <span>Priority fulfillment</span>
+                </li>
+              </ul>
+              <button className="w-full bg-white text-emerald-600 py-4 rounded-lg font-bold hover:bg-emerald-50 transition-all">
+                Start Saving Today
+              </button>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-slate-200">
+              <div className="text-sm font-semibold mb-2 text-slate-600">FLEXIBLE OPTION</div>
+              <h3 className="text-3xl font-bold mb-4 text-slate-900">Credit Terms</h3>
+              <div className="text-5xl font-bold mb-2 text-slate-900">+3.5%</div>
+              <div className="text-slate-600 mb-6">on wholesale price</div>
+              <ul className="space-y-4 mb-8 text-slate-700">
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
+                  <span>24-hour payment window</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
+                  <span>Improve cash flow</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
+                  <span>Still below market rates</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
+                  <span>Build supplier relationship</span>
+                </li>
+              </ul>
+              <button className="w-full bg-slate-900 text-white py-4 rounded-lg font-bold hover:bg-slate-800 transition-all">
+                Apply for Credit
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Simplify Your Supply Chain?</h2>
+          <p className="text-xl mb-8 opacity-90">Join hundreds of restaurants saving time and money with Freshly</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-emerald-600 px-10 py-4 rounded-lg text-lg font-bold hover:bg-emerald-50 transition-all shadow-xl">
+              Get Started Now
+            </button>
+            <button className="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-emerald-600 transition-all">
+              Schedule a Call
+            </button>
+          </div>
+          <div className="mt-8 flex items-center justify-center gap-2 text-sm opacity-75">
+            <Shield size={16} />
+            <span>No credit card required • Cancel anytime</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-900 text-white py-12 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="text-3xl font-bold mb-4">
+            <span className="text-emerald-500">Fresh</span>
+            <span>ly</span>
+          </div>
+          <p className="text-slate-400 mb-6">Simplifying restaurant supply chains, one delivery at a time.</p>
+          <div className="text-slate-500 text-sm">
+            © 2026 Freshly. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
