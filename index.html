@@ -1,307 +1,607 @@
-import React, { useState, useEffect } from 'react';
-import { Check, Clock, TrendingDown, Truck, Shield, Phone } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فریشلی - تازہ پروڈکٹس کی سپلائی</title>
+    <meta name="description" content="گوجرانوالہ میں ریستورانوں کے لیے تازہ سبزیاں، چکن، انڈے اور تمام خوراک کی سپلائی">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-fresh">فریش</span><span class="logo-ly">لی</span>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#products" class="nav-link">پروڈکٹس</a>
+                <a href="#pricing" class="nav-link">قیمتیں</a>
+                <a href="#about" class="nav-link">ہمارے بارے</a>
+                <a href="#contact" class="nav-link">رابطہ</a>
+                <div class="nav-buttons">
+                    <button class="btn-outline">لاگ ان</button>
+                    <button class="btn-primary">سائن اپ</button>
+                    <button class="btn-employee">ملازم لاگ ان</button>
+                </div>
+            </div>
 
-export default function FreshlyLanding() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const products = [
-    { name: 'Fresh Vegetables', icon: '🥬' },
-    { name: 'Premium Chicken', icon: '🍗' },
-    { name: 'Farm Eggs', icon: '🥚' },
-    { name: 'Spices & Herbs', icon: '🌿' },
-    { name: 'Dairy Products', icon: '🧈' },
-    { name: 'Seafood', icon: '🦐' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md' : 'bg-transparent'}`}>
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-3xl font-bold">
-            <span className="text-emerald-600">Fresh</span>
-            <span className="text-slate-800">ly</span>
-          </div>
-          <div className="hidden md:flex gap-8 items-center">
-            <a href="#products" className="text-slate-700 hover:text-emerald-600 transition-colors">Products</a>
-            <a href="#pricing" className="text-slate-700 hover:text-emerald-600 transition-colors">Pricing</a>
-            <a href="#about" className="text-slate-700 hover:text-emerald-600 transition-colors">About</a>
-            <button className="bg-emerald-600 text-white px-6 py-2.5 rounded-lg hover:bg-emerald-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              Get Started
+            <button class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
             </button>
-          </div>
         </div>
-      </nav>
+    </nav>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6 bg-gradient-to-br from-slate-50 via-white to-emerald-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-              <div className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                Trusted by 500+ Restaurants
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-                Stop Managing <span className="text-emerald-600">4 Vendors.</span> Start Winning.
-              </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                One supplier. All ingredients. Same-day delivery. Wholesale prices. 24-hour credit terms. Your kitchen's new best friend.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className="bg-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-emerald-700 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
-                  Request Demo
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content fade-in-left">
+                    <div class="badge">
+                        <i class="fas fa-star"></i>
+                        پاکستان بھر میں 500+ ریستورانوں کا اعتماد
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        <span class="gradient-text">4 سپلائرز</span><br>
+                        <span class="gradient-text-green">کو الوداع کہیں</span><br>
+                        <span class="gradient-text">کامیابی شروع کریں</span>
+                    </h1>
+                    
+                    <p class="hero-desc">
+                        ایک سپلائر۔ تمام اجزاء۔ اسی دن ڈیلیوری۔ <span class="highlight">ہول سیل سے کم قیمت۔</span> 24 گھنٹے کی کریڈٹ سہولت۔ آپ کے کچن کا نیا بہترین ساتھی۔
+                    </p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-cta">
+                            مفت شروع کریں
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="btn-secondary">
+                            <i class="fas fa-play"></i>
+                            ڈیمو دیکھیں
+                        </button>
+                    </div>
+
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>کوئی معاہدہ نہیں</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>کسی بھی وقت منسوخ کریں</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>محفوظ ادائیگیاں</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-card fade-in-right">
+                    <div class="card-glow"></div>
+                    <div class="savings-card">
+                        <div class="card-header">
+                            <h3>آپ کا بچت کیلکولیٹر</h3>
+                            <span class="live-badge">لائیو</span>
+                        </div>
+                        
+                        <div class="savings-amount">
+                            <p class="amount-label">اوسط ماہانہ بچت</p>
+                            <h2 class="amount">₨45,000</h2>
+                            <p class="amount-subtitle">فی ریستوران</p>
+                        </div>
+                        
+                        <div class="stats-list">
+                            <div class="stat-item">
+                                <div class="stat-info">
+                                    <span>ہفتہ وار وقت کی بچت</span>
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <span class="stat-value">8+ گھنٹے</span>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-info">
+                                    <span>سپلائرز کی تعداد</span>
+                                    <i class="fas fa-arrow-down"></i>
+                                </div>
+                                <span class="stat-value">4 سے 1</span>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-info">
+                                    <span>کریڈٹ مدت</span>
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <span class="stat-value">24 گھنٹے</span>
+                            </div>
+                        </div>
+
+                        <button class="card-btn">میری بچت کا حساب لگائیں</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <i class="fas fa-users"></i>
+                    <h3>500+</h3>
+                    <p>ریستوران</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-box"></i>
+                    <h3>50K+</h3>
+                    <p>روزانہ آرڈرز</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-truck"></i>
+                    <h3>99.8%</h3>
+                    <p>وقت پر ڈیلیوری</p>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-arrow-down"></i>
+                    <h3>₨20 لاکھ+</h3>
+                    <p>ماہانہ بچت</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="problem">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge problem-badge">مسئلہ</span>
+                <h2 class="section-title">
+                    پرانا طریقہ آپ کے کاروبار کو <span class="text-red">نقصان</span> پہنچا رہا ہے
+                </h2>
+                <p class="section-desc">ہر روز جو آپ کئی سپلائرز کو منیج کرنے میں ضائع کرتے ہیں، آپ پیسے اور وقت کھو رہے ہیں</p>
+            </div>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <i class="fas fa-users problem-icon"></i>
+                    <h3>4+ سپلائرز</h3>
+                    <p>مختلف ڈیلیوری اوقات، غیر مستقل کوالٹی، مسلسل پریشانیاں</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-credit-card problem-icon"></i>
+                    <h3>کریڈٹ نہیں</h3>
+                    <p>کیش آن ڈیلیوری روزانہ آپ کی ورکنگ کیپٹل ختم کرتی ہے</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-chart-line problem-icon"></i>
+                    <h3>زیادہ قیمتیں</h3>
+                    <p>ریٹیل ادا کر رہے ہیں جبکہ آپ کو ہول سیل کی ضرورت ہے</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-clock problem-icon"></i>
+                    <h3>وقت کا ضیاع</h3>
+                    <p>گاہکوں کی بجائے سپلائرز کو منیج کرنے میں روزانہ 2+ گھنٹے</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <i class="fas fa-bolt"></i>
+                <span>اوسط ریستوران غیر موثر سپلائی چین سے ماہانہ ₨45,000 کھو دیتا ہے</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge solution-badge">حل</span>
+                <h2 class="section-title">فریشلی کا فائدہ</h2>
+                <p class="section-desc">آپ کے کچن کی ہر ضرورت۔ ایک قابل اعتماد ساتھی۔</p>
+            </div>
+
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="card-glow green"></div>
+                    <div class="solution-icon green">
+                        <i class="fas fa-arrow-down"></i>
+                    </div>
+                    <h3>ہول سیل سے کم قیمت</h3>
+                    <p>مارکیٹ ریٹ سے کم ادا کریں۔ کیش پیمنٹ پر سب سے کم قیمت کی گارنٹی۔ کوئی چھپی ہوئی فیس نہیں۔</p>
+                    <div class="price-badge">
+                        <span class="badge-label">کیش ادائیگی</span>
+                        <span class="badge-value green">ہول سیل سے کم</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> بہترین مارکیٹ ریٹ</li>
+                        <li><i class="fas fa-check"></i> کوئی چھپی فیس نہیں</li>
+                        <li><i class="fas fa-check"></i> بڑی مقدار پر رعایت</li>
+                        <li><i class="fas fa-check"></i> قیمت کی گارنٹی</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="card-glow yellow"></div>
+                    <div class="solution-icon yellow">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>24 گھنٹے کریڈٹ</h3>
+                    <p>اپنے کیش فلو کو صحت مند رکھیں۔ آج کی ڈیلیوری کے لیے کل ادائیگی کریں۔ نقدی کی پابندیوں کے بغیر اپنا کاروبار بڑھائیں۔</p>
+                    <div class="price-badge">
+                        <span class="badge-label">کریڈٹ ادائیگی</span>
+                        <span class="badge-value yellow">24 گھنٹے</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> لچکدار ادائیگی</li>
+                        <li><i class="fas fa-check"></i> صرف 3.5% فیس</li>
+                        <li><i class="fas fa-check"></i> منظوری کی ضرورت نہیں</li>
+                        <li><i class="fas fa-check"></i> فوری ایکٹیویشن</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <div class="card-glow teal"></div>
+                    <div class="solution-icon teal">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>ایک ڈیلیوری</h3>
+                    <p>تمام سپلائیز ایک ہی شپمنٹ میں۔ قابل پیش گوئی ٹائمنگ۔ تازہ کوالٹی۔ ہر ایک دن۔ مزید جگلنگ نہیں۔</p>
+                    <div class="price-badge">
+                        <span class="badge-label">ڈیلیوری</span>
+                        <span class="badge-value teal">شیڈول پر</span>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> سنگل ڈیلیوری</li>
+                        <li><i class="fas fa-check"></i> آپ کا ٹائم سلاٹ</li>
+                        <li><i class="fas fa-check"></i> تازگی کی گارنٹی</li>
+                        <li><i class="fas fa-check"></i> ریئل ٹائم ٹریکنگ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">ہماری مصنوعات</span>
+                <h2 class="section-title">ایک چھت کے نیچے سب کچھ</h2>
+                <p class="section-desc">کھیت سے کچن تک، ہر اجزاء جس کی آپ کو ضرورت ہے</p>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">🥬</div>
+                    <h3>تازہ سبزیاں</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🍗</div>
+                    <h3>پریمیم چکن</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🥚</div>
+                    <h3>فارم انڈے</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🌿</div>
+                    <h3>مصالحے</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🧈</div>
+                    <h3>ڈیری پروڈکٹس</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="product-card">
+                    <div class="product-icon">🦐</div>
+                    <h3>سمندری خوراک</h3>
+                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
+                    <a href="#" class="product-link">
+                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">قیمتیں</span>
+                <h2 class="section-title">سادہ، شفاف قیمتیں</h2>
+                <p class="section-desc">اپنے کاروبار کے لیے بہترین انتخاب کریں</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="popular-badge">سب سے مقبول</div>
+                    <div class="pricing-header">
+                        <span class="plan-type">بہترین قیمت</span>
+                        <h3>کیش ادائیگی</h3>
+                        <div class="price">ہول سیل سے کم</div>
+                        <p>سب سے کم قیمت کی گارنٹی</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> ناقابل شکست مارکیٹ ریٹ</li>
+                        <li><i class="fas fa-check"></i> ڈیلیوری پر ادائیگی</li>
+                        <li><i class="fas fa-check"></i> اضافی فیس صفر</li>
+                        <li><i class="fas fa-check"></i> ترجیحی سپلائی</li>
+                        <li><i class="fas fa-check"></i> کوالٹی کی گارنٹی</li>
+                        <li><i class="fas fa-check"></i> وقف شدہ سپورٹ</li>
+                    </ul>
+                    <button class="pricing-btn primary">ابھی بچت شروع کریں</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <span class="plan-type">لچکدار آپشن</span>
+                        <h3>کریڈٹ شرائط</h3>
+                        <div class="price">+3.5% <span class="price-small">سروس فیس</span></div>
+                        <p>24 گھنٹے ادائیگی کی مہلت</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 24 گھنٹے کی ادائیگی شرائط</li>
+                        <li><i class="fas fa-check"></i> کیش فلو بہتر بنائیں</li>
+                        <li><i class="fas fa-check"></i> پھر بھی مارکیٹ ریٹ سے کم</li>
+                        <li><i class="fas fa-check"></i> کریڈٹ ہسٹری بنائیں</li>
+                        <li><i class="fas fa-check"></i> لچکدار ادائیگیاں</li>
+                        <li><i class="fas fa-check"></i> وہی کوالٹی گارنٹی</li>
+                    </ul>
+                    <button class="pricing-btn secondary">کریڈٹ کے لیے درخواست دیں</button>
+                </div>
+            </div>
+
+            <div class="guarantee-box">
+                <i class="fas fa-shield-alt"></i>
+                <span>تمام پلانز میں کوالٹی کی گارنٹی، وقف شدہ سپورٹ، اور آسان منسوخی شامل ہے</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge testimonial-badge">کامیابی کی کہانیاں</span>
+                <h2 class="section-title">ریستوران مالکان کی محبت</h2>
+                <p class="section-desc">دیکھیں ہمارے شراکت دار کیا کہتے ہیں</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"فریشلی نے میری سپلائی لاگت 30% کم کر دی اور ہفتے میں 10 گھنٹے بچا دیے۔ واقعی زبردست!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🍳</div>
+                        <div class="author-info">
+                            <h4>احمد خان</h4>
+                            <p>خان بریانی ہاؤس</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"24 گھنٹے کی کریڈٹ سہولت بہت مددگار ہے۔ کوالٹی ہمیشہ شاندار اور ڈیلیوری وقت پر ہوتی ہے۔"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🍳</div>
+                        <div class="author-info">
+                            <h4>سارہ علی</h4>
+                            <p>دی گارڈن کیفے</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"میرے ریستوران کے لیے بہترین فیصلہ۔ ایک سپلائر، سب کچھ، اور ہول سیل سے بھی سستی قیمتیں!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍🍳</div>
+                        <div class="author-info">
+                            <h4>بلال شیخ</h4>
+                            <p>اربن گرِل</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABCD Ventures -->
+    <section id="about" class="ventures">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge ventures-badge">حمایت یافتہ</span>
+                <h2 class="section-title gradient-text-purple">ABCD وینچرز کا منصوبہ</h2>
+                <p class="section-desc">فریشلی کو ABCD وینچرز کی مکمل حمایت حاصل ہے، جو پورے پاکستان میں ریستوران سپلائی چینز کو انٹرپرائز گریڈ ٹیکنالوجی اور قابل اعتماد فراہم کر رہے ہیں۔</p>
+            </div>
+
+            <div class="ventures-card">
+                <div class="ventures-stats">
+                    <div class="venture-stat">
+                        <i class="fas fa-award"></i>
+                        <h3>انڈسٹری لیڈر</h3>
+                        <p>فوڈ ٹیک جدت میں</p>
+                    </div>
+                    <div class="venture-stat">
+                        <i class="fas fa-chart-bar"></i>
+                        <h3>₨50 کروڑ+</h3>
+                        <p>پلیٹ فارم ویلیویشن</p>
+                    </div>
+                    <div class="venture-stat">
+                        <i class="fas fa-users"></i>
+                        <h3>50+ ٹیم</h3>
+                        <p>وقف شدہ پیشہ ور</p>
+                    </div>
+                </div>
+                <button class="ventures-btn">ABCD وینچرز کے بارے میں جانیں</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="container">
+            <h2 class="cta-title">اپنے ریستوران کو تبدیل کرنے کے لیے تیار ہیں؟</h2>
+            <p class="cta-desc">500+ ریستورانوں میں شامل ہوں جو فریشلی کے ساتھ وقت اور پیسے بچا رہے ہیں</p>
+            
+            <div class="cta-buttons">
+                <button class="btn-cta-white">
+                    مفت شروع کریں
+                    <i class="fas fa-arrow-left"></i>
                 </button>
-                <button className="border-2 border-slate-300 text-slate-700 px-8 py-4 rounded-lg text-lg font-semibold hover:border-emerald-600 hover:text-emerald-600 transition-all">
-                  <Phone className="inline mr-2" size={20} />
-                  Call Now
+                <button class="btn-cta-outline">
+                    کال شیڈول کریں
+                    <i class="fas fa-phone"></i>
                 </button>
-              </div>
+            </div>
 
-              <div className="flex gap-8 text-sm text-slate-600">
-                <div className="flex items-center gap-2">
-                  <Check className="text-emerald-600" size={20} />
-                  <span>No contracts</span>
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <i class="fas fa-check"></i>
+                    <span>کریڈٹ کارڈ کی ضرورت نہیں</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <Check className="text-emerald-600" size={20} />
-                  <span>Cancel anytime</span>
+                <div class="cta-feature">
+                    <i class="fas fa-check"></i>
+                    <span>5 منٹ میں سیٹ اپ</span>
                 </div>
-              </div>
-            </div>
-
-            <div className={`transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-              <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-100">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Your Daily Savings</h3>
-                  <p className="text-slate-600">Average restaurant saves</p>
+                <div class="cta-feature">
+                    <i class="fas fa-check"></i>
+                    <span>کسی بھی وقت منسوخ کریں</span>
                 </div>
-                <div className="text-center mb-6">
-                  <div className="text-5xl font-bold text-emerald-600 mb-2">₨45,000</div>
-                  <div className="text-slate-600">per month</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-fresh">فریش</span><span class="logo-ly">لی</span>
+                    </div>
+                    <p>ٹیکنالوجی، شفافیت اور اعتماد کے ساتھ ریستوران سپلائی چینز میں انقلاب۔ آپ کی تمام ضروریات کے لیے ایک سپلائر۔</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-                <div className="space-y-4 border-t pt-6">
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600">Time saved weekly</span>
-                    <span className="font-semibold text-slate-900">8+ hours</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600">Vendors reduced from</span>
-                    <span className="font-semibold text-slate-900">4 to 1</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-slate-600">Credit period</span>
-                    <span className="font-semibold text-emerald-600">24 hours</span>
-                  </div>
+
+                <div class="footer-links">
+                    <h4>مصنوعات</h4>
+                    <ul>
+                        <li><a href="#">سبزیاں</a></li>
+                        <li><a href="#">چکن</a></li>
+                        <li><a href="#">انڈے</a></li>
+                        <li><a href="#">مصالحے</a></li>
+                        <li><a href="#">ڈیری</a></li>
+                        <li><a href="#">سمندری خوراک</a></li>
+                    </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Problem Section */}
-      <section className="py-20 px-6 bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">The Old Way is Costing You</h2>
-            <p className="text-slate-300 text-lg">Every day you waste managing multiple vendors</p>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { title: '4+ Vendors', desc: 'Different delivery times, quality issues' },
-              { title: 'No Credit', desc: 'Cash on delivery drains working capital' },
-              { title: 'High Prices', desc: 'Paying retail when you need wholesale' },
-              { title: 'Time Wasted', desc: '2+ hours daily managing suppliers' }
-            ].map((item, i) => (
-              <div key={i} className="bg-slate-800 p-6 rounded-xl border-2 border-red-500/20 hover:border-red-500/40 transition-all">
-                <div className="text-red-500 text-4xl font-bold mb-2">✗</div>
-                <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                <p className="text-slate-400">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                <div class="footer-links">
+                    <h4>کمپنی</h4>
+                    <ul>
+                        <li><a href="#">ہمارے بارے میں</a></li>
+                        <li><a href="#">کیریئرز</a></li>
+                        <li><a href="#">پریس کٹ</a></li>
+                        <li><a href="#">شراکت دار</a></li>
+                        <li><a href="#">ABCD وینچرز</a></li>
+                        <li><a href="#">بلاگ</a></li>
+                    </ul>
+                </div>
 
-      {/* Solution Section */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">The Freshly Advantage</h2>
-            <p className="text-slate-600 text-lg">Everything your kitchen needs. One partner you can trust.</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-emerald-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-emerald-100">
-              <div className="bg-emerald-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                <TrendingDown className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Below Wholesale Prices</h3>
-              <p className="text-slate-600 mb-6">Pay less than market rates. Cash payments get you the lowest prices guaranteed. No hidden fees.</p>
-              <div className="bg-white p-4 rounded-lg border border-emerald-200">
-                <div className="text-sm text-slate-600 mb-1">Cash Payment</div>
-                <div className="text-2xl font-bold text-emerald-600">Below Wholesale</div>
-              </div>
+                <div class="footer-links">
+                    <h4>معاونت</h4>
+                    <ul>
+                        <li><a href="#">مدد مرکز</a></li>
+                        <li><a href="#">ہم سے رابطہ کریں</a></li>
+                        <li><a href="#">سوالات</a></li>
+                        <li><a href="#">شرائط خدمات</a></li>
+                        <li><a href="#">رازداری پالیسی</a></li>
+                        <li><a href="#">کوکی پالیسی</a></li>
+                    </ul>
+                </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-blue-100">
-              <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                <Clock className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">24-Hour Credit</h3>
-              <p className="text-slate-600 mb-6">Keep your cash flow healthy. Pay tomorrow for today's delivery. Only 3.5% service fee.</p>
-              <div className="bg-white p-4 rounded-lg border border-blue-200">
-                <div className="text-sm text-slate-600 mb-1">Credit Terms</div>
-                <div className="text-2xl font-bold text-blue-600">24 Hours</div>
-              </div>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h5>ہمیں کال کریں</h5>
+                        <p>+92 300 1234567</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h5>ای میل</h5>
+                        <p>hello@freshly.pk</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h5>مقام</h5>
+                        <p>گوجرانوالہ، پاکستان</p>
+                    </div>
+                </div>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-purple-100">
-              <div className="bg-purple-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                <Truck className="text-white" size={32} />
-              </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">One Delivery</h3>
-              <p className="text-slate-600 mb-6">All your supplies in one shipment. Predictable timing. Fresh quality. Every single day.</p>
-              <div className="bg-white p-4 rounded-lg border border-purple-200">
-                <div className="text-sm text-slate-600 mb-1">Delivery Window</div>
-                <div className="text-2xl font-bold text-purple-600">Your Schedule</div>
-              </div>
+            <div class="footer-bottom">
+                <p>© 2026 فریشلی - ABCD وینچرز کا منصوبہ۔ تمام حقوق محفوظ ہیں۔</p>
+                <div class="footer-legal">
+                    <a href="#">شرائط</a>
+                    <a href="#">رازداری</a>
+                    <a href="#">کوکیز</a>
+                </div>
             </div>
-          </div>
         </div>
-      </section>
+    </footer>
 
-      {/* Products Section */}
-      <section id="products" className="py-20 px-6 bg-slate-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Everything Under One Roof</h2>
-            <p className="text-slate-600 text-lg">From farm to kitchen, we've got you covered</p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {products.map((product, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all border border-slate-200 hover:border-emerald-300">
-                <div className="text-5xl mb-4">{product.icon}</div>
-                <h3 className="text-xl font-bold text-slate-900">{product.name}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Comparison */}
-      <section id="pricing" className="py-20 px-6">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-900 mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-slate-600 text-lg">Choose what works for your business</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 p-8 rounded-2xl shadow-2xl text-white transform hover:scale-105 transition-all">
-              <div className="text-sm font-semibold mb-2 opacity-90">BEST VALUE</div>
-              <h3 className="text-3xl font-bold mb-4">Cash Payment</h3>
-              <div className="text-5xl font-bold mb-6">
-                Below<br/>Wholesale
-              </div>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0" size={20} />
-                  <span>Lowest prices guaranteed</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0" size={20} />
-                  <span>Pay on delivery</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0" size={20} />
-                  <span>No additional fees</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0" size={20} />
-                  <span>Priority fulfillment</span>
-                </li>
-              </ul>
-              <button className="w-full bg-white text-emerald-600 py-4 rounded-lg font-bold hover:bg-emerald-50 transition-all">
-                Start Saving Today
-              </button>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-slate-200">
-              <div className="text-sm font-semibold mb-2 text-slate-600">FLEXIBLE OPTION</div>
-              <h3 className="text-3xl font-bold mb-4 text-slate-900">Credit Terms</h3>
-              <div className="text-5xl font-bold mb-2 text-slate-900">+3.5%</div>
-              <div className="text-slate-600 mb-6">on wholesale price</div>
-              <ul className="space-y-4 mb-8 text-slate-700">
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
-                  <span>24-hour payment window</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
-                  <span>Improve cash flow</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
-                  <span>Still below market rates</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 flex-shrink-0 text-emerald-600" size={20} />
-                  <span>Build supplier relationship</span>
-                </li>
-              </ul>
-              <button className="w-full bg-slate-900 text-white py-4 rounded-lg font-bold hover:bg-slate-800 transition-all">
-                Apply for Credit
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-emerald-600 to-emerald-700 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Simplify Your Supply Chain?</h2>
-          <p className="text-xl mb-8 opacity-90">Join hundreds of restaurants saving time and money with Freshly</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-emerald-600 px-10 py-4 rounded-lg text-lg font-bold hover:bg-emerald-50 transition-all shadow-xl">
-              Get Started Now
-            </button>
-            <button className="border-2 border-white text-white px-10 py-4 rounded-lg text-lg font-bold hover:bg-white hover:text-emerald-600 transition-all">
-              Schedule a Call
-            </button>
-          </div>
-          <div className="mt-8 flex items-center justify-center gap-2 text-sm opacity-75">
-            <Shield size={16} />
-            <span>No credit card required • Cancel anytime</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-6">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="text-3xl font-bold mb-4">
-            <span className="text-emerald-500">Fresh</span>
-            <span>ly</span>
-          </div>
-          <p className="text-slate-400 mb-6">Simplifying restaurant supply chains, one delivery at a time.</p>
-          <div className="text-slate-500 text-sm">
-            © 2026 Freshly. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+    <script src="script.js"></script>
+</body>
+</html>
