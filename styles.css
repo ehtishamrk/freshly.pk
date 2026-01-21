@@ -27,6 +27,11 @@ body.urdu [data-en] {
     display: none !important; 
 }
 
+body.urdu {
+    font-family: 'Noori Nastaleeq', 'Urdu Typesetting', 'Segoe UI', serif;
+    line-height: 1.8;
+}
+
 nav {
     background: linear-gradient(135deg, var(--dark) 0%, var(--tertiary) 100%);
     padding: 1.2rem 5%;
