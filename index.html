@@ -1,607 +1,610 @@
 <!DOCTYPE html>
-<html lang="ur" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فریشلی - تازہ پروڈکٹس کی سپلائی</title>
-    <meta name="description" content="گوجرانوالہ میں ریستورانوں کے لیے تازہ سبزیاں، چکن، انڈے اور تمام خوراک کی سپلائی">
-    <link rel="stylesheet" href="styles.css">
+    <title>Freshly - Fresh Produce Supply for Restaurants | Gujranwala</title>
+    <meta name="description" content="Premium fresh produce supplier for restaurants in Gujranwala. One supplier, all ingredients, 24-hour credit facility.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Language Toggle -->
+    <div class="language-toggle">
+        <button id="langToggle" class="lang-btn">
+            <i class="fas fa-globe"></i>
+            <span class="lang-text">اردو</span>
+        </button>
+    </div>
+
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <span class="logo-fresh">فریش</span><span class="logo-ly">لی</span>
-            </div>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text" data-en="Freshly" data-ur="فریشلی">Freshly</span>
+            </a>
             
             <div class="nav-menu" id="navMenu">
-                <a href="#products" class="nav-link">پروڈکٹس</a>
-                <a href="#pricing" class="nav-link">قیمتیں</a>
-                <a href="#about" class="nav-link">ہمارے بارے</a>
-                <a href="#contact" class="nav-link">رابطہ</a>
+                <a href="index.html" class="nav-link active" data-en="Home" data-ur="ہوم">Home</a>
+                <a href="products.html" class="nav-link" data-en="Products" data-ur="پروڈکٹس">Products</a>
+                <a href="pricing.html" class="nav-link" data-en="Pricing" data-ur="قیمتیں">Pricing</a>
+                <a href="about.html" class="nav-link" data-en="About Us" data-ur="ہمارے بارے">About Us</a>
+                <a href="contact.html" class="nav-link" data-en="Contact" data-ur="رابطہ">Contact</a>
+                
                 <div class="nav-buttons">
-                    <button class="btn-outline">لاگ ان</button>
-                    <button class="btn-primary">سائن اپ</button>
-                    <button class="btn-employee">ملازم لاگ ان</button>
+                    <button class="btn-login" onclick="openLoginModal()" data-en="Login" data-ur="لاگ ان">Login</button>
+                    <button class="btn-signup" onclick="openSignupModal()" data-en="Sign Up" data-ur="سائن اپ">Sign Up</button>
                 </div>
             </div>
 
             <button class="mobile-toggle" id="mobileToggle">
-                <i class="fas fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content fade-in-left">
-                    <div class="badge">
-                        <i class="fas fa-star"></i>
-                        پاکستان بھر میں 500+ ریستورانوں کا اعتماد
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="gradient-text">4 سپلائرز</span><br>
-                        <span class="gradient-text-green">کو الوداع کہیں</span><br>
-                        <span class="gradient-text">کامیابی شروع کریں</span>
-                    </h1>
-                    
-                    <p class="hero-desc">
-                        ایک سپلائر۔ تمام اجزاء۔ اسی دن ڈیلیوری۔ <span class="highlight">ہول سیل سے کم قیمت۔</span> 24 گھنٹے کی کریڈٹ سہولت۔ آپ کے کچن کا نیا بہترین ساتھی۔
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <button class="btn-cta">
-                            مفت شروع کریں
-                            <i class="fas fa-arrow-left"></i>
-                        </button>
-                        <button class="btn-secondary">
-                            <i class="fas fa-play"></i>
-                            ڈیمو دیکھیں
-                        </button>
-                    </div>
-
-                    <div class="hero-features">
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>کوئی معاہدہ نہیں</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-check"></i>
-                            <span>کسی بھی وقت منسوخ کریں</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>محفوظ ادائیگیاں</span>
-                        </div>
-                    </div>
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-shape shape-1"></div>
+            <div class="hero-shape shape-2"></div>
+            <div class="hero-shape shape-3"></div>
+        </div>
+        
+        <div class="container hero-container">
+            <div class="hero-content fade-in-up">
+                <div class="hero-badge">
+                    <i class="fas fa-fire"></i>
+                    <span data-en="500+ Restaurants Trust Us" data-ur="500+ ریستوران ہم پر بھروسہ کرتے ہیں">500+ Restaurants Trust Us</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line" data-en="One Supplier." data-ur="ایک سپلائر۔">One Supplier.</span>
+                    <span class="title-line gradient-text" data-en="All Ingredients." data-ur="تمام اجزاء۔">All Ingredients.</span>
+                    <span class="title-line" data-en="Zero Hassle." data-ur="کوئی پریشانی نہیں۔">Zero Hassle.</span>
+                </h1>
+                
+                <p class="hero-description" data-en="Stop juggling 4+ vendors. Get everything your restaurant needs from one reliable partner. Below wholesale prices, 24-hour credit, daily delivery." data-ur="4+ سپلائرز کو منیج کرنا بند کریں۔ اپنے ریستوران کی ہر ضرورت ایک قابل اعتماد پارٹنر سے حاصل کریں۔ ہول سیل سے کم قیمت، 24 گھنٹے کریڈٹ، روزانہ ڈیلیوری۔">
+                    Stop juggling 4+ vendors. Get everything your restaurant needs from one reliable partner. Below wholesale prices, 24-hour credit, daily delivery.
+                </p>
+                
+                <div class="hero-cta">
+                    <button class="btn-primary btn-large" onclick="openSignupModal()">
+                        <span data-en="Start Saving Today" data-ur="آج بچت شروع کریں">Start Saving Today</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="#how-it-works" class="btn-secondary btn-large">
+                        <i class="fas fa-play-circle"></i>
+                        <span data-en="How It Works" data-ur="کیسے کام کرتا ہے">How It Works</span>
+                    </a>
                 </div>
 
-                <div class="hero-card fade-in-right">
-                    <div class="card-glow"></div>
-                    <div class="savings-card">
-                        <div class="card-header">
-                            <h3>آپ کا بچت کیلکولیٹر</h3>
-                            <span class="live-badge">لائیو</span>
-                        </div>
-                        
-                        <div class="savings-amount">
-                            <p class="amount-label">اوسط ماہانہ بچت</p>
-                            <h2 class="amount">₨45,000</h2>
-                            <p class="amount-subtitle">فی ریستوران</p>
-                        </div>
-                        
-                        <div class="stats-list">
-                            <div class="stat-item">
-                                <div class="stat-info">
-                                    <span>ہفتہ وار وقت کی بچت</span>
-                                    <i class="fas fa-clock"></i>
-                                </div>
-                                <span class="stat-value">8+ گھنٹے</span>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-info">
-                                    <span>سپلائرز کی تعداد</span>
-                                    <i class="fas fa-arrow-down"></i>
-                                </div>
-                                <span class="stat-value">4 سے 1</span>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-info">
-                                    <span>کریڈٹ مدت</span>
-                                    <i class="fas fa-credit-card"></i>
-                                </div>
-                                <span class="stat-value">24 گھنٹے</span>
-                            </div>
-                        </div>
-
-                        <button class="card-btn">میری بچت کا حساب لگائیں</button>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-en="No Contracts" data-ur="کوئی معاہدہ نہیں">No Contracts</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-en="Cancel Anytime" data-ur="کسی بھی وقت منسوخ کریں">Cancel Anytime</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-en="Free Setup" data-ur="مفت سیٹ اپ">Free Setup</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Stats -->
-            <div class="stats-grid">
-                <div class="stat-box">
-                    <i class="fas fa-users"></i>
-                    <h3>500+</h3>
-                    <p>ریستوران</p>
+            <div class="hero-visual fade-in-up delay-1">
+                <div class="savings-calculator">
+                    <div class="calculator-header">
+                        <h3 data-en="Your Monthly Savings" data-ur="آپ کی ماہانہ بچت">Your Monthly Savings</h3>
+                        <span class="live-indicator">
+                            <span class="pulse"></span>
+                            <span data-en="LIVE" data-ur="لائیو">LIVE</span>
+                        </span>
+                    </div>
+                    
+                    <div class="calculator-amount">
+                        <div class="currency">₨</div>
+                        <div class="amount" id="savingsAmount">45,000</div>
+                        <div class="period" data-en="per month" data-ur="فی ماہ">per month</div>
+                    </div>
+
+                    <div class="calculator-breakdown">
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">
+                                <i class="fas fa-clock"></i>
+                                <span data-en="Time Saved" data-ur="وقت کی بچت">Time Saved</span>
+                            </div>
+                            <div class="breakdown-value">8+ hrs/week</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">
+                                <i class="fas fa-users"></i>
+                                <span data-en="Vendors" data-ur="سپلائرز">Vendors</span>
+                            </div>
+                            <div class="breakdown-value">4 → 1</div>
+                        </div>
+                        <div class="breakdown-item">
+                            <div class="breakdown-label">
+                                <i class="fas fa-credit-card"></i>
+                                <span data-en="Credit Period" data-ur="کریڈٹ مدت">Credit Period</span>
+                            </div>
+                            <div class="breakdown-value">24 hours</div>
+                        </div>
+                    </div>
+
+                    <button class="calculator-cta" onclick="openSignupModal()">
+                        <span data-en="Calculate My Savings" data-ur="میری بچت کا حساب لگائیں">Calculate My Savings</span>
+                        <i class="fas fa-calculator"></i>
+                    </button>
                 </div>
-                <div class="stat-box">
-                    <i class="fas fa-box"></i>
-                    <h3>50K+</h3>
-                    <p>روزانہ آرڈرز</p>
-                </div>
-                <div class="stat-box">
-                    <i class="fas fa-truck"></i>
-                    <h3>99.8%</h3>
-                    <p>وقت پر ڈیلیوری</p>
-                </div>
-                <div class="stat-box">
-                    <i class="fas fa-arrow-down"></i>
-                    <h3>₨20 لاکھ+</h3>
-                    <p>ماہانہ بچت</p>
-                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow-down">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section id="problem" class="problem">
+    <!-- Trust Badges -->
+    <section class="trust-badges">
         <div class="container">
-            <div class="section-header">
-                <span class="section-badge problem-badge">مسئلہ</span>
-                <h2 class="section-title">
-                    پرانا طریقہ آپ کے کاروبار کو <span class="text-red">نقصان</span> پہنچا رہا ہے
-                </h2>
-                <p class="section-desc">ہر روز جو آپ کئی سپلائرز کو منیج کرنے میں ضائع کرتے ہیں، آپ پیسے اور وقت کھو رہے ہیں</p>
-            </div>
-
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <i class="fas fa-users problem-icon"></i>
-                    <h3>4+ سپلائرز</h3>
-                    <p>مختلف ڈیلیوری اوقات، غیر مستقل کوالٹی، مسلسل پریشانیاں</p>
-                </div>
-                <div class="problem-card">
-                    <i class="fas fa-credit-card problem-icon"></i>
-                    <h3>کریڈٹ نہیں</h3>
-                    <p>کیش آن ڈیلیوری روزانہ آپ کی ورکنگ کیپٹل ختم کرتی ہے</p>
-                </div>
-                <div class="problem-card">
-                    <i class="fas fa-chart-line problem-icon"></i>
-                    <h3>زیادہ قیمتیں</h3>
-                    <p>ریٹیل ادا کر رہے ہیں جبکہ آپ کو ہول سیل کی ضرورت ہے</p>
-                </div>
-                <div class="problem-card">
-                    <i class="fas fa-clock problem-icon"></i>
-                    <h3>وقت کا ضیاع</h3>
-                    <p>گاہکوں کی بجائے سپلائرز کو منیج کرنے میں روزانہ 2+ گھنٹے</p>
-                </div>
-            </div>
-
-            <div class="warning-box">
-                <i class="fas fa-bolt"></i>
-                <span>اوسط ریستوران غیر موثر سپلائی چین سے ماہانہ ₨45,000 کھو دیتا ہے</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section id="solution" class="solution">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge solution-badge">حل</span>
-                <h2 class="section-title">فریشلی کا فائدہ</h2>
-                <p class="section-desc">آپ کے کچن کی ہر ضرورت۔ ایک قابل اعتماد ساتھی۔</p>
-            </div>
-
-            <div class="solution-grid">
-                <div class="solution-card">
-                    <div class="card-glow green"></div>
-                    <div class="solution-icon green">
-                        <i class="fas fa-arrow-down"></i>
+            <div class="badges-grid">
+                <div class="badge-item fade-in-up">
+                    <div class="badge-icon">
+                        <i class="fas fa-users"></i>
                     </div>
-                    <h3>ہول سیل سے کم قیمت</h3>
-                    <p>مارکیٹ ریٹ سے کم ادا کریں۔ کیش پیمنٹ پر سب سے کم قیمت کی گارنٹی۔ کوئی چھپی ہوئی فیس نہیں۔</p>
-                    <div class="price-badge">
-                        <span class="badge-label">کیش ادائیگی</span>
-                        <span class="badge-value green">ہول سیل سے کم</span>
+                    <div class="badge-content">
+                        <div class="badge-number counter" data-target="500">0</div>
+                        <div class="badge-label" data-en="Happy Restaurants" data-ur="خوش ریستوران">Happy Restaurants</div>
                     </div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> بہترین مارکیٹ ریٹ</li>
-                        <li><i class="fas fa-check"></i> کوئی چھپی فیس نہیں</li>
-                        <li><i class="fas fa-check"></i> بڑی مقدار پر رعایت</li>
-                        <li><i class="fas fa-check"></i> قیمت کی گارنٹی</li>
-                    </ul>
                 </div>
-
-                <div class="solution-card">
-                    <div class="card-glow yellow"></div>
-                    <div class="solution-icon yellow">
-                        <i class="fas fa-clock"></i>
+                <div class="badge-item fade-in-up delay-1">
+                    <div class="badge-icon">
+                        <i class="fas fa-box"></i>
                     </div>
-                    <h3>24 گھنٹے کریڈٹ</h3>
-                    <p>اپنے کیش فلو کو صحت مند رکھیں۔ آج کی ڈیلیوری کے لیے کل ادائیگی کریں۔ نقدی کی پابندیوں کے بغیر اپنا کاروبار بڑھائیں۔</p>
-                    <div class="price-badge">
-                        <span class="badge-label">کریڈٹ ادائیگی</span>
-                        <span class="badge-value yellow">24 گھنٹے</span>
+                    <div class="badge-content">
+                        <div class="badge-number counter" data-target="50000">0</div>
+                        <div class="badge-label" data-en="Daily Orders" data-ur="روزانہ آرڈرز">Daily Orders</div>
                     </div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> لچکدار ادائیگی</li>
-                        <li><i class="fas fa-check"></i> صرف 3.5% فیس</li>
-                        <li><i class="fas fa-check"></i> منظوری کی ضرورت نہیں</li>
-                        <li><i class="fas fa-check"></i> فوری ایکٹیویشن</li>
-                    </ul>
                 </div>
-
-                <div class="solution-card">
-                    <div class="card-glow teal"></div>
-                    <div class="solution-icon teal">
+                <div class="badge-item fade-in-up delay-2">
+                    <div class="badge-icon">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3>ایک ڈیلیوری</h3>
-                    <p>تمام سپلائیز ایک ہی شپمنٹ میں۔ قابل پیش گوئی ٹائمنگ۔ تازہ کوالٹی۔ ہر ایک دن۔ مزید جگلنگ نہیں۔</p>
-                    <div class="price-badge">
-                        <span class="badge-label">ڈیلیوری</span>
-                        <span class="badge-value teal">شیڈول پر</span>
+                    <div class="badge-content">
+                        <div class="badge-number">99.8%</div>
+                        <div class="badge-label" data-en="On-Time Delivery" data-ur="وقت پر ڈیلیوری">On-Time Delivery</div>
                     </div>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> سنگل ڈیلیوری</li>
-                        <li><i class="fas fa-check"></i> آپ کا ٹائم سلاٹ</li>
-                        <li><i class="fas fa-check"></i> تازگی کی گارنٹی</li>
-                        <li><i class="fas fa-check"></i> ریئل ٹائم ٹریکنگ</li>
-                    </ul>
+                </div>
+                <div class="badge-item fade-in-up delay-3">
+                    <div class="badge-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="badge-content">
+                        <div class="badge-number">4.9/5</div>
+                        <div class="badge-label" data-en="Customer Rating" data-ur="کسٹمر ریٹنگ">Customer Rating</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="products">
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">ہماری مصنوعات</span>
-                <h2 class="section-title">ایک چھت کے نیچے سب کچھ</h2>
-                <p class="section-desc">کھیت سے کچن تک، ہر اجزاء جس کی آپ کو ضرورت ہے</p>
+                <span class="section-badge" data-en="Simple Process" data-ur="آسان عمل">Simple Process</span>
+                <h2 class="section-title" data-en="How Freshly Works" data-ur="فریشلی کیسے کام کرتا ہے">How Freshly Works</h2>
+                <p class="section-description" data-en="Four simple steps to transform your restaurant's supply chain" data-ur="اپنے ریستوران کی سپلائی چین کو تبدیل کرنے کے چار آسان اقدامات">
+                    Four simple steps to transform your restaurant's supply chain
+                </p>
             </div>
 
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-icon">🥬</div>
-                    <h3>تازہ سبزیاں</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🍗</div>
-                    <h3>پریمیم چکن</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🥚</div>
-                    <h3>فارم انڈے</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🌿</div>
-                    <h3>مصالحے</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🧈</div>
-                    <h3>ڈیری پروڈکٹس</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <div class="product-icon">🦐</div>
-                    <h3>سمندری خوراک</h3>
-                    <p>پریمیم کوالٹی، روزانہ تازہ ڈیلیوری</p>
-                    <a href="#" class="product-link">
-                        مصنوعات دیکھیں <i class="fas fa-arrow-left"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">قیمتیں</span>
-                <h2 class="section-title">سادہ، شفاف قیمتیں</h2>
-                <p class="section-desc">اپنے کاروبار کے لیے بہترین انتخاب کریں</p>
-            </div>
-
-            <div class="pricing-grid">
-                <div class="pricing-card featured">
-                    <div class="popular-badge">سب سے مقبول</div>
-                    <div class="pricing-header">
-                        <span class="plan-type">بہترین قیمت</span>
-                        <h3>کیش ادائیگی</h3>
-                        <div class="price">ہول سیل سے کم</div>
-                        <p>سب سے کم قیمت کی گارنٹی</p>
+            <div class="process-timeline">
+                <div class="process-step fade-in-up">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> ناقابل شکست مارکیٹ ریٹ</li>
-                        <li><i class="fas fa-check"></i> ڈیلیوری پر ادائیگی</li>
-                        <li><i class="fas fa-check"></i> اضافی فیس صفر</li>
-                        <li><i class="fas fa-check"></i> ترجیحی سپلائی</li>
-                        <li><i class="fas fa-check"></i> کوالٹی کی گارنٹی</li>
-                        <li><i class="fas fa-check"></i> وقف شدہ سپورٹ</li>
-                    </ul>
-                    <button class="pricing-btn primary">ابھی بچت شروع کریں</button>
+                    <div class="step-content">
+                        <h3 data-en="Sign Up" data-ur="سائن اپ کریں">Sign Up</h3>
+                        <p data-en="Create your account in less than 5 minutes. No credit card required, no contracts to sign." data-ur="5 منٹ سے کم میں اپنا اکاؤنٹ بنائیں۔ کریڈٹ کارڈ کی ضرورت نہیں، کوئی معاہدہ نہیں۔">
+                            Create your account in less than 5 minutes. No credit card required, no contracts to sign.
+                        </p>
+                    </div>
+                    <div class="step-connector"></div>
                 </div>
 
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <span class="plan-type">لچکدار آپشن</span>
-                        <h3>کریڈٹ شرائط</h3>
-                        <div class="price">+3.5% <span class="price-small">سروس فیس</span></div>
-                        <p>24 گھنٹے ادائیگی کی مہلت</p>
+                <div class="process-step fade-in-up delay-1">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-list"></i>
                     </div>
-                    <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 24 گھنٹے کی ادائیگی شرائط</li>
-                        <li><i class="fas fa-check"></i> کیش فلو بہتر بنائیں</li>
-                        <li><i class="fas fa-check"></i> پھر بھی مارکیٹ ریٹ سے کم</li>
-                        <li><i class="fas fa-check"></i> کریڈٹ ہسٹری بنائیں</li>
-                        <li><i class="fas fa-check"></i> لچکدار ادائیگیاں</li>
-                        <li><i class="fas fa-check"></i> وہی کوالٹی گارنٹی</li>
-                    </ul>
-                    <button class="pricing-btn secondary">کریڈٹ کے لیے درخواست دیں</button>
+                    <div class="step-content">
+                        <h3 data-en="Daily Order Collection" data-ur="روزانہ آرڈر لینا">Daily Order Collection</h3>
+                        <p data-en="Our order taker visits your restaurant daily between 9 PM - 1 AM. Just tell them what you need for tomorrow." data-ur="ہمارا آرڈر لینے والا روزانہ رات 9 بجے سے 1 بجے کے درمیان آپ کے ریستوران میں آتا ہے۔ بس انہیں بتائیں کہ کل کیا چاہیے۔">
+                            Our order taker visits your restaurant daily between 9 PM - 1 AM. Just tell them what you need for tomorrow.
+                        </p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+
+                <div class="process-step fade-in-up delay-2">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Choose Payment Method" data-ur="ادائیگی کا طریقہ منتخب کریں">Choose Payment Method</h3>
+                        <p data-en="Select cash (below wholesale price) or 24-hour credit (+3.5% fee). Flexibility that works for you." data-ur="کیش (ہول سیل سے کم قیمت) یا 24 گھنٹے کریڈٹ (+3.5% فیس) منتخب کریں۔ لچکداری جو آپ کے لیے کام کرتی ہے۔">
+                            Select cash (below wholesale price) or 24-hour credit (+3.5% fee). Flexibility that works for you.
+                        </p>
+                    </div>
+                    <div class="step-connector"></div>
+                </div>
+
+                <div class="process-step fade-in-up delay-3">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-truck-loading"></i>
+                    </div>
+                    <div class="step-content">
+                        <h3 data-en="Next Day Delivery" data-ur="اگلے دن ڈیلیوری">Next Day Delivery</h3>
+                        <p data-en="Receive fresh products before your operations start. Pay the delivery person and the cycle continues!" data-ur="اپنے آپریشنز شروع ہونے سے پہلے تازہ مصنوعات وصول کریں۔ ڈیلیوری والے کو ادائیگی کریں اور سائیکل جاری رہتا ہے!">
+                            Receive fresh products before your operations start. Pay the delivery person and the cycle continues!
+                        </p>
+                    </div>
                 </div>
             </div>
 
-            <div class="guarantee-box">
-                <i class="fas fa-shield-alt"></i>
-                <span>تمام پلانز میں کوالٹی کی گارنٹی، وقف شدہ سپورٹ، اور آسان منسوخی شامل ہے</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge testimonial-badge">کامیابی کی کہانیاں</span>
-                <h2 class="section-title">ریستوران مالکان کی محبت</h2>
-                <p class="section-desc">دیکھیں ہمارے شراکت دار کیا کہتے ہیں</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"فریشلی نے میری سپلائی لاگت 30% کم کر دی اور ہفتے میں 10 گھنٹے بچا دیے۔ واقعی زبردست!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍🍳</div>
-                        <div class="author-info">
-                            <h4>احمد خان</h4>
-                            <p>خان بریانی ہاؤس</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"24 گھنٹے کی کریڈٹ سہولت بہت مددگار ہے۔ کوالٹی ہمیشہ شاندار اور ڈیلیوری وقت پر ہوتی ہے۔"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👩‍🍳</div>
-                        <div class="author-info">
-                            <h4>سارہ علی</h4>
-                            <p>دی گارڈن کیفے</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"میرے ریستوران کے لیے بہترین فیصلہ۔ ایک سپلائر، سب کچھ، اور ہول سیل سے بھی سستی قیمتیں!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍🍳</div>
-                        <div class="author-info">
-                            <h4>بلال شیخ</h4>
-                            <p>اربن گرِل</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABCD Ventures -->
-    <section id="about" class="ventures">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge ventures-badge">حمایت یافتہ</span>
-                <h2 class="section-title gradient-text-purple">ABCD وینچرز کا منصوبہ</h2>
-                <p class="section-desc">فریشلی کو ABCD وینچرز کی مکمل حمایت حاصل ہے، جو پورے پاکستان میں ریستوران سپلائی چینز کو انٹرپرائز گریڈ ٹیکنالوجی اور قابل اعتماد فراہم کر رہے ہیں۔</p>
-            </div>
-
-            <div class="ventures-card">
-                <div class="ventures-stats">
-                    <div class="venture-stat">
-                        <i class="fas fa-award"></i>
-                        <h3>انڈسٹری لیڈر</h3>
-                        <p>فوڈ ٹیک جدت میں</p>
-                    </div>
-                    <div class="venture-stat">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>₨50 کروڑ+</h3>
-                        <p>پلیٹ فارم ویلیویشن</p>
-                    </div>
-                    <div class="venture-stat">
-                        <i class="fas fa-users"></i>
-                        <h3>50+ ٹیم</h3>
-                        <p>وقف شدہ پیشہ ور</p>
-                    </div>
-                </div>
-                <button class="ventures-btn">ABCD وینچرز کے بارے میں جانیں</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="cta-bg"></div>
-        <div class="container">
-            <h2 class="cta-title">اپنے ریستوران کو تبدیل کرنے کے لیے تیار ہیں؟</h2>
-            <p class="cta-desc">500+ ریستورانوں میں شامل ہوں جو فریشلی کے ساتھ وقت اور پیسے بچا رہے ہیں</p>
-            
-            <div class="cta-buttons">
-                <button class="btn-cta-white">
-                    مفت شروع کریں
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <button class="btn-cta-outline">
-                    کال شیڈول کریں
-                    <i class="fas fa-phone"></i>
+            <div class="process-cta">
+                <button class="btn-primary btn-large" onclick="openSignupModal()">
+                    <span data-en="Get Started Now" data-ur="ابھی شروع کریں">Get Started Now</span>
+                    <i class="fas fa-rocket"></i>
                 </button>
             </div>
+        </div>
+    </section>
 
-            <div class="cta-features">
-                <div class="cta-feature">
-                    <i class="fas fa-check"></i>
-                    <span>کریڈٹ کارڈ کی ضرورت نہیں</span>
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge" data-en="Why Choose Us" data-ur="ہمیں کیوں منتخب کریں">Why Choose Us</span>
+                <h2 class="section-title" data-en="The Freshly Difference" data-ur="فریشلی کا فرق">The Freshly Difference</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in-up">
+                    <div class="feature-icon emerald">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3 data-en="Below Wholesale Prices" data-ur="ہول سیل سے کم قیمتیں">Below Wholesale Prices</h3>
+                    <p data-en="Save money on every order with our unbeatable pricing. Pay cash and get the best rates in the market." data-ur="ہماری ناقابل شکست قیمتوں کے ساتھ ہر آرڈر پر پیسے بچائیں۔ کیش ادا کریں اور مارکیٹ میں بہترین ریٹ حاصل کریں۔">
+                        Save money on every order with our unbeatable pricing. Pay cash and get the best rates in the market.
+                    </p>
                 </div>
-                <div class="cta-feature">
-                    <i class="fas fa-check"></i>
-                    <span>5 منٹ میں سیٹ اپ</span>
+
+                <div class="feature-card fade-in-up delay-1">
+                    <div class="feature-icon mint">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-en="24-Hour Credit" data-ur="24 گھنٹے کریڈٹ">24-Hour Credit</h3>
+                    <p data-en="Improve your cash flow with our flexible 24-hour payment terms. Only 3.5% service fee." data-ur="ہماری لچکدار 24 گھنٹے ادائیگی کی شرائط کے ساتھ اپنے کیش فلو کو بہتر بنائیں۔ صرف 3.5% سروس فیس۔">
+                        Improve your cash flow with our flexible 24-hour payment terms. Only 3.5% service fee.
+                    </p>
                 </div>
-                <div class="cta-feature">
-                    <i class="fas fa-check"></i>
-                    <span>کسی بھی وقت منسوخ کریں</span>
+
+                <div class="feature-card fade-in-up delay-2">
+                    <div class="feature-icon forest">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 data-en="Farm Fresh Quality" data-ur="فارم تازہ کوالٹی">Farm Fresh Quality</h3>
+                    <p data-en="Premium quality products sourced directly from trusted farms. Freshness guaranteed every single day." data-ur="قابل اعتماد فارمز سے براہ راست حاصل کی گئی پریمیم کوالٹی مصنوعات۔ ہر ایک دن تازگی کی گارنٹی۔">
+                        Premium quality products sourced directly from trusted farms. Freshness guaranteed every single day.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in-up delay-3">
+                    <div class="feature-icon emerald">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 data-en="Reliable Delivery" data-ur="قابل اعتماد ڈیلیوری">Reliable Delivery</h3>
+                    <p data-en="99.8% on-time delivery rate. Your products arrive fresh before you start operations." data-ur="99.8% وقت پر ڈیلیوری کی شرح۔ آپ کی مصنوعات آپریشنز شروع کرنے سے پہلے تازہ پہنچتی ہیں۔">
+                        99.8% on-time delivery rate. Your products arrive fresh before you start operations.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in-up delay-4">
+                    <div class="feature-icon mint">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 data-en="24/7 Support" data-ur="24/7 سپورٹ">24/7 Support</h3>
+                    <p data-en="Dedicated support team available round the clock. We're here whenever you need us." data-ur="وقف شدہ سپورٹ ٹیم چوبیس گھنٹے دستیاب ہے۔ ہم یہاں ہیں جب بھی آپ کو ہماری ضرورت ہو۔">
+                        Dedicated support team available round the clock. We're here whenever you need us.
+                    </p>
+                </div>
+
+                <div class="feature-card fade-in-up delay-5">
+                    <div class="feature-icon forest">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-en="Quality Guarantee" data-ur="کوالٹی کی گارنٹی">Quality Guarantee</h3>
+                    <p data-en="100% satisfaction guaranteed or your money back. We stand behind our products." data-ur="100% اطمینان کی گارنٹی یا آپ کی رقم واپس۔ ہم اپنی مصنوعات کے پیچھے کھڑے ہیں۔">
+                        100% satisfaction guaranteed or your money back. We stand behind our products.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-bg">
+            <div class="cta-shape"></div>
+        </div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-en="Ready to Transform Your Restaurant?" data-ur="اپنے ریستوران کو تبدیل کرنے کے لیے تیار ہیں؟">Ready to Transform Your Restaurant?</h2>
+                <p class="cta-description" data-en="Join 500+ restaurants already saving time and money with Freshly" data-ur="500+ ریستورانوں میں شامل ہوں جو پہلے سے فریشلی کے ساتھ وقت اور پیسے بچا رہے ہیں">
+                    Join 500+ restaurants already saving time and money with Freshly
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn-white btn-large" onclick="openSignupModal()">
+                        <span data-en="Start Free Trial" data-ur="مفت ٹرائل شروع کریں">Start Free Trial</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <a href="contact.html" class="btn-outline-white btn-large">
+                        <i class="fas fa-phone"></i>
+                        <span data-en="Talk to Sales" data-ur="سیلز سے بات کریں">Talk to Sales</span>
+                    </a>
+                </div>
+                <div class="cta-note">
+                    <i class="fas fa-check-circle"></i>
+                    <span data-en="No credit card required • Cancel anytime • Free setup" data-ur="کریڈٹ کارڈ کی ضرورت نہیں • کسی بھی وقت منسوخ کریں • مفت سیٹ اپ">No credit card required • Cancel anytime • Free setup</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="footer">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-main">
                 <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-fresh">فریش</span><span class="logo-ly">لی</span>
-                    </div>
-                    <p>ٹیکنالوجی، شفافیت اور اعتماد کے ساتھ ریستوران سپلائی چینز میں انقلاب۔ آپ کی تمام ضروریات کے لیے ایک سپلائر۔</p>
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-icon">🌿</span>
+                        <span class="logo-text">Freshly</span>
+                    </a>
+                    <p class="footer-tagline" data-en="Revolutionizing restaurant supply chains with technology, transparency, and trust." data-ur="ٹیکنالوجی، شفافیت اور اعتماد کے ساتھ ریستوران سپلائی چینز میں انقلاب۔">
+                        Revolutionizing restaurant supply chains with technology, transparency, and trust.
+                    </p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-links">
-                    <h4>مصنوعات</h4>
+                    <h4 data-en="Company" data-ur="کمپنی">Company</h4>
                     <ul>
-                        <li><a href="#">سبزیاں</a></li>
-                        <li><a href="#">چکن</a></li>
-                        <li><a href="#">انڈے</a></li>
-                        <li><a href="#">مصالحے</a></li>
-                        <li><a href="#">ڈیری</a></li>
-                        <li><a href="#">سمندری خوراک</a></li>
+                        <li><a href="about.html" data-en="About Us" data-ur="ہمارے بارے">About Us</a></li>
+                        <li><a href="products.html" data-en="Products" data-ur="پروڈکٹس">Products</a></li>
+                        <li><a href="pricing.html" data-en="Pricing" data-ur="قیمتیں">Pricing</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4>کمپنی</h4>
+                    <h4 data-en="Legal" data-ur="قانونی">Legal</h4>
                     <ul>
-                        <li><a href="#">ہمارے بارے میں</a></li>
-                        <li><a href="#">کیریئرز</a></li>
-                        <li><a href="#">پریس کٹ</a></li>
-                        <li><a href="#">شراکت دار</a></li>
-                        <li><a href="#">ABCD وینچرز</a></li>
-                        <li><a href="#">بلاگ</a></li>
+                        <li><a href="privacy.html" data-en="Privacy Policy" data-ur="رازداری کی پالیسی">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-en="Terms of Service" data-ur="سروس کی شرائط">Terms of Service</a></li>
+                        <li><a href="cookies.html" data-en="Cookie Policy" data-ur="کوکی پالیسی">Cookie Policy</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4>معاونت</h4>
-                    <ul>
-                        <li><a href="#">مدد مرکز</a></li>
-                        <li><a href="#">ہم سے رابطہ کریں</a></li>
-                        <li><a href="#">سوالات</a></li>
-                        <li><a href="#">شرائط خدمات</a></li>
-                        <li><a href="#">رازداری پالیسی</a></li>
-                        <li><a href="#">کوکی پالیسی</a></li>
+                    <h4 data-en="Get In Touch" data-ur="رابطہ کریں">Get In Touch</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Gujranwala, Pakistan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+92 300 1234567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>hello@freshly.pk</span>
+                        </li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="footer-contact">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h5>ہمیں کال کریں</h5>
-                        <p>+92 300 1234567</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h5>ای میل</h5>
-                        <p>hello@freshly.pk</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h5>مقام</h5>
-                        <p>گوجرانوالہ، پاکستان</p>
-                    </div>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 فریشلی - ABCD وینچرز کا منصوبہ۔ تمام حقوق محفوظ ہیں۔</p>
-                <div class="footer-legal">
-                    <a href="#">شرائط</a>
-                    <a href="#">رازداری</a>
-                    <a href="#">کوکیز</a>
+                <div class="footer-bottom-left">
+                    <p>&copy; 2024 Freshly. <span data-en="All rights reserved." data-ur="تمام حقوق محفوظ ہیں۔">All rights reserved.</span></p>
+                    <p class="venture-credit">
+                        <span data-en="A Project of" data-ur="ایک منصوبہ">A Project of</span>
+                        <strong>ABCD Ventures</strong>
+                    </p>
+                </div>
+                <div class="footer-bottom-right">
+                    <button class="employee-login-btn" onclick="openEmployeeModal()">
+                        <i class="fas fa-user-tie"></i>
+                        <span data-en="Employee Login" data-ur="ملازم لاگ ان">Employee Login</span>
+                    </button>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-overlay" onclick="closeLoginModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeLoginModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2 data-en="Welcome Back" data-ur="خوش آمدید">Welcome Back</h2>
+                <p data-en="Login to your Freshly account" data-ur="اپنے فریشلی اکاؤنٹ میں لاگ ان کریں">Login to your Freshly account</p>
+            </div>
+            <form class="modal-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label data-en="Email Address" data-ur="ای میل ایڈریس">Email Address</label>
+                    <input type="email" placeholder="you@restaurant.com" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <span data-en="Remember me" data-ur="مجھے یاد رکھیں">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link" data-en="Forgot password?" data-ur="پاس ورڈ بھول گئے؟">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-full">
+                    <span data-en="Login" data-ur="لاگ ان">Login</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+                <div class="modal-footer">
+                    <span data-en="Don't have an account?" data-ur="اکاؤنٹ نہیں ہے؟">Don't have an account?</span>
+                    <a href="#" onclick="switchToSignup()" data-en="Sign up" data-ur="سائن اپ کریں">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal" id="signupModal">
+        <div class="modal-overlay" onclick="closeSignupModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeSignupModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <h2 data-en="Create Account" data-ur="اکاؤنٹ بنائیں">Create Account</h2>
+                <p data-en="Start saving with Freshly today" data-ur="آج ہی فریشلی کے ساتھ بچت شروع کریں">Start saving with Freshly today</p>
+            </div>
+            <form class="modal-form" onsubmit="handleSignup(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label data-en="First Name" data-ur="پہلا نام">First Name</label>
+                        <input type="text" placeholder="Ahmad" required>
+                    </div>
+                    <div class="form-group">
+                        <label data-en="Last Name" data-ur="آخری نام">Last Name</label>
+                        <input type="text" placeholder="Khan" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label data-en="Restaurant Name" data-ur="ریستوران کا نام">Restaurant Name</label>
+                    <input type="text" placeholder="Your Restaurant Name" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Email Address" data-ur="ای میل ایڈریس">Email Address</label>
+                    <input type="email" placeholder="you@restaurant.com" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
+                    <input type="tel" placeholder="+92 300 1234567" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <label class="checkbox">
+                    <input type="checkbox" required>
+                    <span data-en="I agree to the Terms of Service and Privacy Policy" data-ur="میں سروس کی شرائط اور رازداری کی پالیسی سے اتفاق کرتا ہوں">I agree to the Terms of Service and Privacy Policy</span>
+                </label>
+                <button type="submit" class="btn-primary btn-full">
+                    <span data-en="Create Account" data-ur="اکاؤنٹ بنائیں">Create Account</span>
+                    <i class="fas fa-user-plus"></i>
+                </button>
+                <div class="modal-footer">
+                    <span data-en="Already have an account?" data-ur="پہلے سے اکاؤنٹ ہے؟">Already have an account?</span>
+                    <a href="#" onclick="switchToLogin()" data-en="Login" data-ur="لاگ ان">Login</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Employee Login Modal -->
+    <div class="modal" id="employeeModal">
+        <div class="modal-overlay" onclick="closeEmployeeModal()"></div>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeEmployeeModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-header">
+                <div class="employee-badge">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <h2 data-en="Employee Portal" data-ur="ملازم پورٹل">Employee Portal</h2>
+                <p data-en="Access your Freshly employee account" data-ur="اپنے فریشلی ملازم اکاؤنٹ تک رسائی حاصل کریں">Access your Freshly employee account</p>
+            </div>
+            <form class="modal-form" onsubmit="handleEmployeeLogin(event)">
+                <div class="form-group">
+                    <label data-en="Employee ID" data-ur="ملازم ID">Employee ID</label>
+                    <input type="text" placeholder="EMP-12345" required>
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary btn-full">
+                    <span data-en="Access Portal" data-ur="پورٹل تک رسائی">Access Portal</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div class="employee-note">
+                    <i class="fas fa-info-circle"></i>
+                    <span data-en="For employees only. If you're a restaurant owner, please use customer login." data-ur="صرف ملازمین کے لیے۔ اگر آپ ریستوران کے مالک ہیں تو براہ کرم کسٹمر لاگ ان استعمال کریں۔">For employees only. If you're a restaurant owner, please use customer login.</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookieConsent">
+        <div class="cookie-content">
+            <div class="cookie-icon">🍪</div>
+            <div class="cookie-text">
+                <h4 data-en="We use cookies" data-ur="ہم کوکیز استعمال کرتے ہیں">We use cookies</h4>
+                <p data-en="We use cookies to enhance your browsing experience and analyze our traffic. By clicking 'Accept', you consent to our use of cookies." data-ur="ہم آپ کے براؤزنگ تجربے کو بڑھانے اور اپنی ٹریفک کا تجزیہ کرنے کے لیے کوکیز استعمال کرتے ہیں۔ 'قبول کریں' پر کلک کرکے، آپ ہماری کوکیز کے استعمال پر رضامندی دیتے ہیں۔">We use cookies to enhance your browsing experience and analyze our traffic. By clicking 'Accept', you consent to our use of cookies.</p>
+            </div>
+            <div class="cookie-actions">
+                <a href="cookies.html" class="cookie-link" data-en="Learn more" data-ur="مزید جانیں">Learn more</a>
+                <button class="btn-cookie-accept" onclick="acceptCookies()" data-en="Accept" data-ur="قبول کریں">Accept</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>
