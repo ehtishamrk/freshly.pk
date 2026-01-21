@@ -16,9 +16,16 @@ body {
     overflow-x: hidden;
 }
 
-[data-ur] { display: none; }
-body.urdu [data-en] { display: none; }
-body.urdu [data-ur] { display: inline; }
+/* Hide Urdu by default, Hide English when Urdu class is active */
+[data-ur] { display: none !important; }
+
+body.urdu [data-ur] { 
+    display: initial !important; 
+}
+
+body.urdu [data-en] { 
+    display: none !important; 
+}
 
 nav {
     background: linear-gradient(135deg, var(--dark) 0%, var(--tertiary) 100%);
