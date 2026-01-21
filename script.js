@@ -52,6 +52,9 @@ function toggleLanguage() {
     }
     
     localStorage.setItem('language', currentLang);
+    
+    // Add this line to actually update the text
+    updatePageContent(); 
 }
 
 // Load saved language preference
@@ -61,7 +64,7 @@ if (savedLang === 'ur') {
     document.body.classList.add('urdu');
     document.body.style.direction = 'rtl';
 }
-
+updatePageContent();
 // Scroll functionality
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -163,3 +166,16 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(card);
     });
 });
+function updatePageContent() {
+    // Select all elements that have both language attributes
+    const elements = document.querySelectorAll('[data-en][data-ur]');
+    
+    elements.forEach(element => {
+        // Get the text based on the current language
+        const content = element.getAttribute(currentLang === 'ur' ? 'data-ur' : 'data-en');
+        if (content) {
+            element.textContent = content;
+        }
+    });
+}
+
