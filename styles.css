@@ -16,17 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Hide Urdu by default, Hide English when Urdu class is active */
-[data-ur] { display: none !important; }
-
-body.urdu [data-ur] { 
-    display: initial !important; 
-}
-
-body.urdu [data-en] { 
-    display: none !important; 
-}
-
 body.urdu {
     font-family: 'Noori Nastaleeq', 'Urdu Typesetting', 'Segoe UI', serif;
     line-height: 1.8;
