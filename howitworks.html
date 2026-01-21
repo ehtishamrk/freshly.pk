@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Freshly</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2350C878'/%3E%3Cpath d='M30 55 Q35 40 50 35 Q65 40 70 55 L65 60 Q62 50 50 45 Q38 50 35 60 Z' fill='white'/%3E%3Cpath d='M45 30 Q50 20 55 30 L53 32 Q50 27 47 32 Z' fill='%23013220'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🌿</div>
+                <span data-en="Freshly" data-ur="فریشلی">Freshly</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" data-en="Home" data-ur="ہوم">Home</a>
+                <a href="how-it-works.html" data-en="How It Works" data-ur="یہ کیسے کام کرتا ہے">How It Works</a>
+                <a href="about.html" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
+                <a href="#" onclick="openModal('signup'); return false;" class="cta-btn" data-en="Get Started" data-ur="شروع کریں">Get Started</a>
+                <button class="lang-toggle" onclick="toggleLanguage()" data-en="اردو" data-ur="English">اردو</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span data-en="Simple Process," data-ur="آسان عمل،">Simple Process,</span><br>
+                    <span class="highlight" data-en="Daily Fresh Supplies" data-ur="روزانہ تازہ سپلائیز">Daily Fresh Supplies</span>
+                </h1>
+                <p data-en="We've streamlined restaurant supply management into a simple, efficient process that saves you time and money every single day." data-ur="ہم نے ریستوران کی سپلائی مینجمنٹ کو ایک آسان، موثر عمل میں بدل دیا ہے جو آپ کا وقت اور پیسے بچاتا ہے۔">
+                    We've streamlined restaurant supply management into a simple, efficient process that saves you time and money every single day.
+                </p>
+            </div>
+            <div class="hero-image">
+                <svg width="100%" height="400" viewBox="0 0 600 400">
+                    <rect width="600" height="400" fill="#D1F2EB" rx="20"/>
+                    <circle cx="300" cy="200" r="100" fill="#50C878" opacity="0.2"/>
+                    <circle cx="300" cy="200" r="70" fill="#0B6E4F" opacity="0.3"/>
+                    <path d="M 300 130 L 300 270 M 230 200 L 370 200" stroke="white" stroke-width="15" stroke-linecap="round"/>
+                    <circle cx="300" cy="200" r="120" stroke="#50C878" stroke-width="3" fill="none"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="problem-section">
+        <h2 class="section-title" data-en="Our Process in 5 Simple Steps" data-ur="ہمارا عمل 5 آسان مراحل میں">Our Process in 5 Simple Steps</h2>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <div class="step-icon">📝</div>
+                <h3 data-en="Sign Up" data-ur="سائن اپ کریں">Sign Up</h3>
+                <p data-en="Register your restaurant with Freshly. It takes just 5 minutes. Provide your basic details and we'll set up your account immediately." data-ur="فریشلی کے ساتھ اپنے ریستوران کو رجسٹر کریں۔ صرف 5 منٹ لگتے ہیں۔ اپنی بنیادی تفصیلات فراہم کریں اور ہم فوری طور پر آپ کا اکاؤنٹ ترتیب دیں گے۔">
+                    Register your restaurant with Freshly. It takes just 5 minutes. Provide your basic details and we'll set up your account immediately.
+                </p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <div class="step-icon">👤</div>
+                <h3 data-en="Daily Visit (9 PM - 1 AM)" data-ur="روزانہ دورہ (رات 9 - صبح 1 بجے)">Daily Visit (9 PM - 1 AM)</h3>
+                <p data-en="Our dedicated order taker visits your restaurant every night between 9 PM and 1 AM to collect your requirements for the next day." data-ur="ہمارا سرشار آرڈر لینے والا ہر رات 9 بجے سے رات 1 بجے کے درمیان آپ کے ریستوران کا دورہ کرتا ہے اگلے دن کی ضروریات جمع کرنے کے لیے۔">
+                    Our dedicated order taker visits your restaurant every night between 9 PM and 1 AM to collect your requirements for the next day.
+                </p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <div class="step-icon">🛒</div>
+                <h3 data-en="Place Your Order" data-ur="اپنا آرڈر دیں">Place Your Order</h3>
+                <p data-en="Tell our order taker exactly what you need - chicken, vegetables, eggs, spices, or anything else. Choose between cash payment or our 24-hour credit facility." data-ur="ہمارے آرڈر لینے والے کو بتائیں کہ آپ کو کیا چاہیے - چکن، سبزیاں، انڈے، مصالحے، یا کچھ اور۔ نقد ادائیگی یا ہماری 24 گھنٹے کی کریڈٹ سہولت میں سے انتخاب کریں۔">
+                    Tell our order taker exactly what you need - chicken, vegetables, eggs, spices, or anything else. Choose between cash payment or our 24-hour credit facility.
+                </p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <div class="step-icon">🚚</div>
+                <h3 data-en="Morning Delivery" data-ur="صبح کی ڈیلیوری">Morning Delivery</h3>
+                <p data-en="We deliver all your fresh supplies before you start your daily operations. Everything arrives fresh, on time, and ready to use." data-ur="ہم آپ کے روزمرہ کام شروع ہونے سے پہلے آپ کی تمام تازہ سپلائیز پہنچاتے ہیں۔ سب کچھ تازہ، وقت پر، اور استعمال کے لیے تیار پہنچتا ہے۔">
+                    We deliver all your fresh supplies before you start your daily operations. Everything arrives fresh, on time, and ready to use.
+                </p>
+            </div>
+            
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <div class="step-icon">💳</div>
+                <h3 data-en="Easy Payment" data-ur="آسان ادائیگی">Easy Payment</h3>
+                <p data-en="Pay your bill through our delivery person. If you chose credit, you have 24 hours to pay with just a 3.5% convenience fee. Cash payments get below wholesale prices!" data-ur="اپنا بل ہمارے ڈیلیوری شخص کے ذریعے ادا کریں۔ اگر آپ نے کریڈٹ کا انتخاب کیا، تو آپ کے پاس صرف 3.5٪ سہولت فیس کے ساتھ ادائیگی کے لیے 24 گھنٹے ہیں۔ نقد ادائیگی پر ہول سیل سے کم قیمتیں ملتی ہیں!">
+                    Pay your bill through our delivery person. If you chose credit, you have 24 hours to pay with just a 3.5% convenience fee. Cash payments get below wholesale prices!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="solution-section">
+        <div class="solution-content">
+            <div class="solution-text">
+                <h2 data-en="Why Restaurant Owners Love This Process" data-ur="ریستوران کے مالکان اس عمل کو کیوں پسند کرتے ہیں">Why Restaurant Owners Love This Process</h2>
+                <div class="solution-features">
+                    <div class="feature">
+                        <div class="feature-icon">⏰</div>
+                        <div class="feature-text">
+                            <h3 data-en="Time Saving" data-ur="وقت کی بچت">Time Saving</h3>
+                            <p data-en="No more calling 4+ vendors every day. One person, one order, everything handled." data-ur="ہر روز 4+ وینڈرز کو کال کرنے کی ضرورت نہیں۔ ایک شخص، ایک آرڈر، سب کچھ سنبھالا ہوا۔">No more calling 4+ vendors every day. One person, one order, everything handled.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">💰</div>
+                        <div class="feature-text">
+                            <h3 data-en="Better Cash Flow" data-ur="بہتر کیش فلو">Better Cash Flow</h3>
+                            <p data-en="24-hour credit facility means you can manage your restaurant's finances more effectively." data-ur="24 گھنٹے کی کریڈٹ سہولت کا مطلب ہے کہ آپ اپنے ریستوران کی مالیات کو زیادہ مؤثر طریقے سے منظم کر سکتے ہیں۔">24-hour credit facility means you can manage your restaurant's finances more effectively.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">✅</div>
+                        <div class="feature-text">
+                            <h3 data-en="Guaranteed Quality" data-ur="معیار کی ضمانت">Guaranteed Quality</h3>
+                            <p data-en="Fresh supplies every morning. If anything isn't perfect, we'll replace it immediately." data-ur="ہر صبح تازہ سپلائیز۔ اگر کچھ بھی کامل نہیں ہے، تو ہم اسے فوری طور پر تبدیل کر دیں گے۔">Fresh supplies every morning. If anything isn't perfect, we'll replace it immediately.</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-text">
+                            <h3 data-en="Predictable Costs" data-ur="قابل پیش گوئی لاگت">Predictable Costs</h3>
+                            <p data-en="Transparent pricing with no hidden charges. Cash prices below wholesale, credit at just 3.5% more." data-ur="چھپی ہوئی فیس کے بغیر شفاف قیمتیں۔ نقد قیمتیں ہول سیل سے کم، کریڈٹ صرف 3.5٪ زیادہ پر۔">Transparent pricing with no hidden charges. Cash prices below wholesale, credit at just 3.5% more.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <svg width="100%" height="400" viewBox="0 0 600 400">
+                    <rect width="600" height="400" fill="rgba(255,255,255,0.1)" rx="20"/>
+                    <circle cx="150" cy="150" r="60" fill="white" opacity="0.2"/>
+                    <circle cx="450" cy="250" r="80" fill="white" opacity="0.2"/>
+                    <rect x="200" y="100" width="200" height="200" fill="white" opacity="0.15" rx="15"/>
+                    <path d="M 250 180 L 280 210 L 350 140" stroke="#50C878" stroke-width="12" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="problem-section" style="background: var(--primary);">
+        <h2 class="section-title" data-en="Transparent Pricing" data-ur="شفاف قیمتوں کا تعین">Transparent Pricing</h2>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon">💵</div>
+                <h3 data-en="Cash Payment" data-ur="نقد ادائیگی">Cash Payment</h3>
+                <p data-en="Pay cash on delivery and enjoy prices BELOW wholesale market rates. Yes, we really mean it!" data-ur="ڈیلیوری پر نقد ادا کریں اور ہول سیل مارکیٹ کی شرحوں سے کم قیمتوں سے لطف اندوز ہوں۔ ہاں، ہمارا واقعی یہی مطلب ہے!">Pay cash on delivery and enjoy prices BELOW wholesale market rates. Yes, we really mean it!</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">💳</div>
+                <h3 data-en="24-Hour Credit" data-ur="24 گھنٹے کریڈٹ">24-Hour Credit</h3>
+                <p data-en="Need credit? Take 24 hours to pay with just a 3.5% convenience fee. Perfect for managing cash flow!" data-ur="کریڈٹ کی ضرورت ہے؟ صرف 3.5٪ سہولت فیس کے ساتھ ادائیگی کے لیے 24 گھنٹے لیں۔ کیش فلو کا انتظام کرنے کے لیے بہترین!">Need credit? Take 24 hours to pay with just a 3.5% convenience fee. Perfect for managing cash flow!</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon">🚫</div>
+                <h3 data-en="No Hidden Fees" data-ur="کوئی چھپی فیس نہیں">No Hidden Fees</h3>
+                <p data-en="What you see is what you pay. No delivery charges, no membership fees, no surprises." data-ur="جو آپ دیکھتے ہیں وہی آپ ادا کرتے ہیں۔ کوئی ڈیلیوری چارجز نہیں، کوئی ممبرشپ فیس نہیں، کوئی حیرانی نہیں۔">What you see is what you pay. No delivery charges, no membership fees, no surprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2 data-en="Ready to Transform Your Supply Chain?" data-ur="اپنی سپلائی چین کو تبدیل کرنے کے لیے تیار ہیں؟">Ready to Transform Your Supply Chain?</h2>
+        <p data-en="Join hundreds of successful restaurants using Freshly" data-ur="فریشلی استعمال کرنے والے سینکڑوں کامیاب ریستورانوں میں شامل ہوں">Join hundreds of successful restaurants using Freshly</p>
+        <button class="btn-primary" onclick="openModal('signup')" data-en="Sign Up Now" data-ur="ابھی سائن اپ کریں">Sign Up Now</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 data-en="Freshly" data-ur="فریشلی">Freshly</h3>
+                <p data-en="Your one-stop shop for all restaurant supplies. Fresh, reliable, affordable." data-ur="تمام ریستوران سپلائیز کے لیے آپ کی ون اسٹاپ شاپ۔ تازہ، قابل اعتماد، سستی۔">Your one-stop shop for all restaurant supplies. Fresh, reliable, affordable.</p>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Quick Links" data-ur="فوری لنکس">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li>
+                    <li><a href="how-it-works.html" data-en="How It Works" data-ur="یہ کیسے کام کرتا ہے">How It Works</a></li>
+                    <li><a href="about.html" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a></li>
+                    <li><a href="#" onclick="openModal('employee'); return false;" data-en="Employee Login" data-ur="ملازم لاگ ان">Employee Login</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Legal" data-ur="قانونی">Legal</h3>
+                <ul>
+                    <li><a href="privacy.html" data-en="Privacy Policy" data-ur="رازداری کی پالیسی">Privacy Policy</a></li>
+                    <li><a href="terms.html" data-en="Terms of Service" data-ur="سروس کی شرائط">Terms of Service</a></li>
+                    <li><a href="cookies.html" data-en="Cookie Policy" data-ur="کوکی پالیسی">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 data-en="Contact" data-ur="رابطہ">Contact</h3>
+                <p data-en="Email: info@freshly.com" data-ur="ای میل: info@freshly.com">Email: info@freshly.com</p>
+                <p data-en="Phone: +92 XXX XXXXXXX" data-ur="فون: +92 XXX XXXXXXX">Phone: +92 XXX XXXXXXX</p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.7;" data-en="A project of ABCD Ventures" data-ur="ABCD وینچرز کا ایک منصوبہ">A project of ABCD Ventures</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-en="&copy; 2025 Freshly. All rights reserved." data-ur="&copy; 2025 فریشلی۔ تمام حقوق محفوظ ہیں۔">&copy; 2025 Freshly. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signup')">&times;</span>
+            <h2 data-en="Sign Up" data-ur="سائن اپ">Sign Up</h2>
+            <form onsubmit="handleSignup(event)">
+                <div class="form-group">
+                    <label data-en="Restaurant Name" data-ur="ریستوران کا نام">Restaurant Name</label>
+                    <input type="text" required placeholder="Enter restaurant name">
+                </div>
+                <div class="form-group">
+                    <label data-en="Owner Name" data-ur="مالک کا نام">Owner Name</label>
+                    <input type="text" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
+                    <input type="tel" required placeholder="+92 XXX XXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label data-en="Email" data-ur="ای میل">Email</label>
+                    <input type="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="submit-btn" data-en="Create Account" data-ur="اکاؤنٹ بنائیں">Create Account</button>
+            </form>
+            <div class="modal-switch">
+                <span data-en="Already have an account?" data-ur="پہلے سے اکاؤنٹ ہے؟">Already have an account?</span>
+                <a onclick="switchModal('signup', 'login')" data-en="Login" data-ur="لاگ ان">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('login')">&times;</span>
+            <h2 data-en="Login" data-ur="لاگ ان">Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label data-en="Email" data-ur="ای میل">Email</label>
+                    <input type="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="submit-btn" data-en="Login" data-ur="لاگ ان">Login</button>
+            </form>
+            <div class="modal-switch">
+                <span data-en="Don't have an account?" data-ur="اکاؤنٹ نہیں ہے؟">Don't have an account?</span>
+                <a onclick="switchModal('login', 'signup')" data-en="Sign Up" data-ur="سائن اپ">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('employee')">&times;</span>
+            <h2 data-en="Employee Login" data-ur="ملازم لاگ ان">Employee Login</h2>
+            <form onsubmit="handleEmployeeLogin(event)">
+                <div class="form-group">
+                    <label data-en="Employee ID" data-ur="ملازم آئی ڈی">Employee ID</label>
+                    <input type="text" required placeholder="Enter employee ID">
+                </div>
+                <div class="form-group">
+                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
+                    <input type="password" required placeholder="Enter password">
+                </div>
+                <button type="submit" class="submit-btn" data-en="Login" data-ur="لاگ ان">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
