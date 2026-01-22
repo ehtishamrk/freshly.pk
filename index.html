@@ -3,302 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshly - One Stop Shop for Restaurant Supplies</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2350C878'/%3E%3Cpath d='M30 55 Q35 40 50 35 Q65 40 70 55 L65 60 Q62 50 50 45 Q38 50 35 60 Z' fill='white'/%3E%3Cpath d='M45 30 Q50 20 55 30 L53 32 Q50 27 47 32 Z' fill='%23013220'/%3E%3C/svg%3E">
+    <title>Freshly - The Future of Restaurant Supply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Freshly - Pakistan's #1 Restaurant Supply Solution. Get fresh produce, meat, and supplies delivered daily with 24-hour credit facility and wholesale prices.">
-<meta name="keywords" content="restaurant supplies, wholesale food Pakistan, fresh produce delivery, restaurant credit, chicken supplier, vegetable supplier, horeca supplies">
-<meta name="author" content="Freshly">
-<meta property="og:title" content="Freshly - One Stop Shop for Restaurant Supplies">
-<meta property="og:description" content="Simplify your supply chain with single-vendor delivery and flexible credit options.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80">
-<meta property="og:type" content="website">
-</head>
+    </head>
 <body>
-    <!-- Navigation -->
-   <nav id="navbar">
-    <div class="nav-container">
-        <div class="logo">
-            <div class="logo-icon">🌿</div>
-            <span data-en="Freshly" data-ur="فریشلی">Freshly</span>
+    
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🌿</div>
+                <span class="logo-text">Freshly</span>
+            </a>
+            
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html" class="active" data-en="Home" data-ur="ہوم">Home</a>
+                <a href="how-it-works.html" data-en="Process" data-ur="طریقہ کار">Process</a>
+                <a href="about-us.html" data-en="Our Story" data-ur="ہماری کہانی">Our Story</a>
+                <a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a>
+                <div class="nav-buttons">
+                    <button class="lang-toggle" onclick="toggleLanguage()">
+                        <span class="lang-text">اردو</span>
+                    </button>
+                    <a href="#" onclick="openModal('signup'); return false;" class="cta-btn pulse-btn" data-en="Get Started" data-ur="شروع کریں">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="organic-blob blob-1"></div>
+        <div class="organic-blob blob-2"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content reveal-left">
+                <div class="badge" data-en="#1 Restaurant Supply Chain" data-ur="#1 ریسٹورنٹ سپلائی چین">#1 Restaurant Supply Chain</div>
+                <h1>
+                    <span data-en="Supply Chain" data-ur="سپلائی چین">Supply Chain</span> <br>
+                    <span class="gradient-text" data-en="Simplified." data-ur="آسان بنا دی گئی۔">Simplified.</span>
+                </h1>
+                <p data-en="Stop juggling 5 different vendors. We deliver fresh produce, meat, and spices daily before you even open your doors. 24-hour credit available." data-ur="5 مختلف وینڈرز کے چکر لگانا بند کریں۔ ہم آپ کے دروازے کھلنے سے پہلے ہی تازہ سبزیاں، گوشت اور مصالحے فراہم کرتے ہیں۔ 24 گھنٹے کریڈٹ دستیاب ہے۔">
+                    Stop juggling 5 different vendors. We deliver fresh produce, meat, and spices daily before you even open your doors.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="openModal('signup')" data-en="Start Ordering Now" data-ur="آرڈر شروع کریں">Start Ordering Now</button>
+                    <a href="how-it-works.html" class="btn-text" data-en="See how it works →" data-ur="یہ کیسے کام کرتا ہے →">See how it works →</a>
+                </div>
+                
+                <div class="trust-badges">
+                    <div class="trust-item">
+                        <span class="trust-number">500+</span>
+                        <span class="trust-label" data-en="Restaurants" data-ur="ریستوران">Restaurants</span>
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-number">99%</span>
+                        <span class="trust-label" data-en="On-Time" data-ur="وقت پر">On-Time</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual reveal-right">
+                <div class="glass-card main-card">
+                    <div class="card-header">
+                        <div class="circle red"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle green"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="order-row">
+                            <span class="icon">🍗</span>
+                            <div class="details">
+                                <span data-en="Fresh Chicken (40kg)" data-ur="تازہ چکن">Fresh Chicken (40kg)</span>
+                                <small data-en="Delivered 8:00 AM" data-ur="8:00 بجے پہنچایا گیا">Delivered 8:00 AM</small>
+                            </div>
+                            <span class="status success">Done</span>
+                        </div>
+                        <div class="order-row">
+                            <span class="icon">🥦</span>
+                            <div class="details">
+                                <span data-en="Vegetables Mix" data-ur="سبزیاں">Vegetables Mix</span>
+                                <small data-en="Delivered 8:00 AM" data-ur="8:00 بجے پہنچایا گیا">Delivered 8:00 AM</small>
+                            </div>
+                            <span class="status success">Done</span>
+                        </div>
+                        <div class="floating-price-tag">
+                            <span data-en="Save 15% Monthly" data-ur="15% بچت">Save 15% Monthly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="custom-shape-divider-bottom-16789">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
         </div>
+    </header>
 
-        <div class="nav-links">
-            <a href="index.html" data-en="Home" data-ur="ہوم">Home</a>
-            <a href="how-it-works.html" data-en="How It Works" data-ur="طریقہ کار">How It Works</a>
-            <a href="about-us.html" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
-            <a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a>
-            <a href="#" onclick="openModal('signup'); return false;" class="cta-btn" data-en="Get Started" data-ur="شروع کریں">Get Started</a>
-            <button class="lang-toggle" onclick="toggleLanguage()">اردو</button>
+    <section class="bento-section">
+        <div class="section-header text-center">
+            <h2 data-en="Why Upgrade to Freshly?" data-ur="فریشلی کیوں منتخب کریں؟">Why Upgrade to Freshly?</h2>
+            <p data-en="The modern way to manage your restaurant kitchen." data-ur="اپنے ریسٹورنٹ کچن کو منظم کرنے کا جدید طریقہ۔">The modern way to manage your restaurant kitchen.</p>
         </div>
-    </div>
-</nav>
+        
+        <div class="bento-grid">
+            <div class="bento-card large-card reveal-up">
+                <div class="bento-content">
+                    <div class="bento-icon">🚀</div>
+                    <h3 data-en="One Order, Everything Sorted" data-ur="ایک آرڈر، سب کچھ مکمل">One Order, Everything Sorted</h3>
+                    <p data-en="Chicken, spices, veggies, and packaging. We bring the entire wholesale market to your doorstep with a single click." data-ur="چکن، مصالحے، سبزیاں اور پیکیجنگ۔ ہم ایک کلک کے ساتھ پوری ہول سیل مارکیٹ آپ کے دروازے پر لاتے ہیں۔">Chicken, spices, veggies, and packaging. We bring the entire wholesale market to your doorstep.</p>
+                </div>
+                <div class="bento-bg-pattern"></div>
+            </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>
-                    <span data-en="One Platform," data-ur="ایک پلیٹ فارم،">One Platform,</span><br>
-                    <span class="highlight" data-en="All Your Restaurant Supplies" data-ur="تمام ریستوراں کی فراہمی">All Your Restaurant Supplies</span>
-                </h1>
-                <p data-en="Stop juggling multiple vendors. Get everything you need from chicken to spices, delivered fresh daily with 24-hour credit facility." data-ur="متعدد وینڈرز سے نمٹنا بند کریں۔ چکن سے لے کر مصالحے تک سب کچھ تازہ روزانہ 24 گھنٹے کریڈٹ سہولت کے ساتھ حاصل کریں۔">
-                    Stop juggling multiple vendors. Get everything you need from chicken to spices, delivered fresh daily with 24-hour credit facility.
-                </p>
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="openModal('signup')" data-en="Start Ordering" data-ur="آرڈر شروع کریں">Start Ordering</button>
-                    <a href="how-it-works.html" class="btn-secondary" data-en="Learn More" data-ur="مزید جانیں">Learn More</a>
+            <div class="bento-card medium-card color-accent reveal-up" style="transition-delay: 0.1s;">
+                <div class="bento-content">
+                    <div class="bento-icon">💳</div>
+                    <h3 data-en="24H Credit" data-ur="24 گھنٹے کریڈٹ">24H Credit</h3>
+                    <p data-en="Cash flow tight? Pay us after you sell." data-ur="پیسوں کی کمی؟ بیچنے کے بعد ہمیں ادائیگی کریں۔">Cash flow tight? Pay us after you sell.</p>
                 </div>
             </div>
-            <div class="hero-image">
-                <svg width="100%" height="400" viewBox="0 0 600 400">
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#50C878;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#0B6E4F;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <rect width="600" height="400" fill="#D1F2EB" rx="20"/>
-                    <circle cx="150" cy="150" r="80" fill="url(#grad1)" opacity="0.3"/>
-                    <circle cx="450" cy="250" r="100" fill="url(#grad1)" opacity="0.2"/>
-                    <rect x="200" y="150" width="200" height="150" fill="white" rx="15" opacity="0.9"/>
-                    <circle cx="250" cy="200" r="30" fill="#50C878"/>
-                    <circle cx="350" cy="200" r="30" fill="#0B6E4F"/>
-                    <rect x="220" y="250" width="160" height="10" fill="#D1F2EB" rx="5"/>
-                    <rect x="220" y="270" width="120" height="10" fill="#D1F2EB" rx="5"/>
-                </svg>
-            </div>
-        </div>
-    </section>
 
-    <!-- Problem Section -->
-    <section class="problem-section">
-        <h2 class="section-title" data-en="The Problem We Solve" data-ur="ہم جو مسئلہ حل کرتے ہیں">The Problem We Solve</h2>
-        <div class="problems-grid">
-            <div class="problem-card">
-                <div class="problem-icon">📞</div>
-                <h3 data-en="Multiple Vendors" data-ur="متعدد وینڈرز">Multiple Vendors</h3>
-                <p data-en="Managing 4+ different suppliers for chicken, vegetables, eggs, and spices daily" data-ur="روزانہ چکن، سبزیاں، انڈے اور مصالحوں کے لیے 4+ مختلف سپلائرز کا انتظام">Managing 4+ different suppliers for chicken, vegetables, eggs, and spices daily</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">⏰</div>
-                <h3 data-en="Inconsistent Delivery" data-ur="غیر مستقل ڈیلیوری">Inconsistent Delivery</h3>
-                <p data-en="Each vendor has different delivery times and policies causing operational chaos" data-ur="ہر وینڈر کے مختلف ڈیلیوری اوقات اور پالیسیاں آپریشنل افراتفری کا سبب بنتی ہیں">Each vendor has different delivery times and policies causing operational chaos</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">💰</div>
-                <h3 data-en="No Credit Facility" data-ur="کوئی کریڈٹ سہولت نہیں">No Credit Facility</h3>
-                <p data-en="Most vendors demand immediate cash payment, straining your cash flow" data-ur="زیادہ تر وینڈرز فوری نقد ادائیگی کا مطالبہ کرتے ہیں، آپ کے کیش فلو پر دباؤ ڈالتے ہیں">Most vendors demand immediate cash payment, straining your cash flow</p>
-            </div>
-            <div class="problem-card">
-                <div class="problem-icon">📈</div>
-                <h3 data-en="High Prices" data-ur="زیادہ قیمتیں">High Prices</h3>
-                <p data-en="Paying above wholesale prices, eating into your profit margins" data-ur="ہول سیل سے زیادہ قیمتیں ادا کرنا، آپ کے منافع میں کمی">Paying above wholesale prices, eating into your profit margins</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="solution-section">
-        <div class="solution-content">
-            <div class="solution-text">
-                <h2 data-en="The Freshly Solution" data-ur="فریشلی حل">The Freshly Solution</h2>
-                <div class="solution-features">
-                    <div class="feature">
-                        <div class="feature-icon">✅</div>
-                        <div class="feature-text">
-                            <h3 data-en="Single Vendor" data-ur="واحد وینڈر">Single Vendor</h3>
-                            <p data-en="All your supplies from one trusted source" data-ur="آپ کی تمام سپلائیز ایک قابل اعتماد ذریعہ سے">All your supplies from one trusted source</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">🚚</div>
-                        <div class="feature-text">
-                            <h3 data-en="Daily Delivery" data-ur="روزانہ ڈیلیوری">Daily Delivery</h3>
-                            <p data-en="Fresh supplies delivered before you open, every single day" data-ur="ہر روز کھولنے سے پہلے تازہ سامان پہنچایا جاتا ہے">Fresh supplies delivered before you open, every single day</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">💳</div>
-                        <div class="feature-text">
-                            <h3 data-en="24-Hour Credit" data-ur="24 گھنٹے کریڈٹ">24-Hour Credit</h3>
-                            <p data-en="Manage your cash flow better with flexible payment (only 3.5% fee)" data-ur="لچکدار ادائیگی کے ساتھ اپنے کیش فلو کو بہتر بنائیں (صرف 3.5٪ فیس)">Manage your cash flow better with flexible payment (only 3.5% fee)</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <div class="feature-icon">💵</div>
-                        <div class="feature-text">
-                            <h3 data-en="Below Wholesale Prices" data-ur="ہول سیل سے کم قیمتیں">Below Wholesale Prices</h3>
-                            <p data-en="Pay cash and save money - prices actually below wholesale!" data-ur="نقد ادا کریں اور پیسے بچائیں - قیمتیں واقعی ہول سیل سے کم!">Pay cash and save money - prices actually below wholesale!</p>
-                        </div>
-                    </div>
+            <div class="bento-card medium-card reveal-up" style="transition-delay: 0.2s;">
+                <div class="bento-content">
+                    <div class="bento-icon">📉</div>
+                    <h3 data-en="Wholesale Rates" data-ur="ہول سیل ریٹ">Wholesale Rates</h3>
+                    <p data-en="We buy in bulk so you save big." data-ur="ہم بڑی مقدار میں خریدتے ہیں تاکہ آپ کی بچت ہو۔">We buy in bulk so you save big.</p>
                 </div>
             </div>
-            <div class="hero-image">
-                <svg width="100%" height="400" viewBox="0 0 600 400">
-                    <rect width="600" height="400" fill="rgba(255,255,255,0.1)" rx="20"/>
-                    <circle cx="300" cy="200" r="120" fill="white" opacity="0.2"/>
-                    <path d="M 250 200 L 280 230 L 350 160" stroke="#50C878" stroke-width="15" fill="none" stroke-linecap="round"/>
-                    <circle cx="300" cy="200" r="140" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
-                </svg>
+        </div>
+    </section>
+
+    <section class="timeline-section">
+        <div class="section-header text-center">
+            <h2 data-en="How It Works" data-ur="طریقہ کار">How It Works</h2>
+        </div>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            
+            <div class="timeline-item reveal-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="step-num">01</span>
+                    <h3 data-en="Order at Night" data-ur="رات کو آرڈر کریں">Order at Night</h3>
+                    <p data-en="Place your order via WhatsApp or App between 9 PM - 1 AM." data-ur="رات 9 سے 1 بجے کے درمیان واٹس ایپ یا ایپ کے ذریعے اپنا آرڈر دیں۔">Place your order via WhatsApp or App between 9 PM - 1 AM.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-left">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="step-num">02</span>
+                    <h3 data-en="We Source Fresh" data-ur="ہم تازہ خریدتے ہیں">We Source Fresh</h3>
+                    <p data-en="Our team hits the Mandi while you sleep to pick the best." data-ur="ہماری ٹیم آپ کے سوتے وقت منڈی سے بہترین چیزیں چنتی ہے۔">Our team hits the Mandi while you sleep to pick the best.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal-right">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content glass-card">
+                    <span class="step-num">03</span>
+                    <h3 data-en="Morning Delivery" data-ur="صبح کی ڈیلیوری">Morning Delivery</h3>
+                    <p data-en="Supplies arrive at your kitchen before your chefs do." data-ur="آپ کے شیف کے آنے سے پہلے سامان آپ کے کچن میں پہنچ جاتا ہے۔">Supplies arrive at your kitchen before your chefs do.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">100+</div>
-                <div class="stat-label" data-en="Happy Restaurants" data-ur="خوش ریستوران">Happy Restaurants</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label" data-en="Support Available" data-ur="سپورٹ دستیاب">Support Available</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">500+</div>
-                <div class="stat-label" data-en="Daily Orders" data-ur="روزانہ آرڈرز">Daily Orders</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">99%</div>
-                <div class="stat-label" data-en="On-Time Delivery" data-ur="وقت پر ڈیلیوری">On-Time Delivery</div>
-            </div>
+    <section class="final-cta">
+        <div class="cta-box reveal-up">
+            <h2 data-en="Ready to fix your supply chain?" data-ur="اپنی سپلائی چین کو ٹھیک کرنے کے لیے تیار ہیں؟">Ready to fix your supply chain?</h2>
+            <p data-en="Join 100+ Smart Restaurants in Pakistan." data-ur="پاکستان میں 100+ ہوشیار ریستورانوں میں شامل ہوں۔">Join 100+ Smart Restaurants in Pakistan.</p>
+            <button class="btn-white pulse-btn" onclick="openModal('signup')" data-en="Create Free Account" data-ur="مفت اکاؤنٹ بنائیں">Create Free Account</button>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2 data-en="Ready to Simplify Your Supply Chain?" data-ur="اپنی سپلائی چین کو آسان بنانے کے لیے تیار ہیں؟">Ready to Simplify Your Supply Chain?</h2>
-        <p data-en="Join hundreds of restaurants that trust Freshly for their daily supplies" data-ur="سینکڑوں ریستوراں میں شامل ہوں جو اپنی روزانہ سپلائیز کے لیے فریشلی پر بھروسہ کرتے ہیں">Join hundreds of restaurants that trust Freshly for their daily supplies</p>
-        <button class="btn-primary" onclick="openModal('signup')" data-en="Get Started Today" data-ur="آج ہی شروع کریں">Get Started Today</button>
-    </section>
-
-    <!-- Footer -->
     <footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3 data-en="Freshly" data-ur="فریشلی">Freshly</h3>
-            <p data-en="Revolutionizing the restaurant supply chain in Pakistan. Fresh ingredients, daily delivery, and credit facilities tailored for your business growth." data-ur="پاکستان میں ریسٹورنٹ سپلائی چین میں انقلاب۔ تازہ اجزاء، روزانہ ڈیلیوری، اور آپ کے کاروبار کی ترقی کے لیے کریڈٹ سہولیات۔">
-                Revolutionizing the restaurant supply chain in Pakistan. Fresh ingredients, daily delivery, and credit facilities tailored for your business growth.
-            </p>
-            <div class="social-links">
-                <a href="#" class="social-icon" title="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                <a href="#" class="social-icon" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 011.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.217 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772 4.915 4.915 0 01-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.217-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.247-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.065.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 016.665 2.465C7.302 2.218 8.028 2.05 9.093 2.002 10.159 1.954 10.498 1.944 13.215 1.944zm0 2.433c-2.67 0-2.997.01-4.053.058-.971.045-1.505.207-1.858.344-.466.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.886-.344 1.857-.047 1.055-.058 1.383-.058 4.053 0 2.67.01 2.997.058 4.053.045.971.207 1.505.344 1.858.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.886.3 1.857.344 1.054.048 1.37.058 4.041.058 2.67 0 2.997-.01 4.053-.058.971-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.886.344-1.857.048-1.055.058-1.383.058-4.053 0-2.67-.01-2.997-.058-4.053-.045-.971-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.886-.3-1.857-.344-1.055-.047-1.383-.058-4.053-.058zm0 5.838a3.729 3.729 0 110 7.458 3.729 3.729 0 010-7.458zm0 2.433a1.296 1.296 0 100 2.592 1.296 1.296 0 000-2.592zm5.338-3.205a.881.881 0 110 1.762.881.881 0 010-1.762z"/></svg></a>
-                <a href="#" class="social-icon" title="WhatsApp"><svg viewBox="0 0 24 24" width="20" height="20" fill="white"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.1 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.13-2.9-7-1.87-1.87-4.35-2.9-7.01-2.9zm5.95 13.9c-.25.7-.85 1.25-1.55 1.55-.7.3-3.6.45-4.85-.8-.85-.85-2.1-2.55-2.1-3.9 0-1.35.7-2.05 1-2.35.25-.25.55-.3.75-.3s.4.05.6.5c.2.45.65 1.55.7 1.65.05.15.05.25 0 .35-.05.1-.1.25-.25.4s-.2.3-.3.45c-.1.15-.25.25-.1.45.15.2.65 1.1 1.4 1.75.95.85 1.75 1.1 2 1.25.25.15.4.1.55-.05.15-.2.65-.75.85-1 .2-.25.4-.2.65-.1.25.1 1.55.75 1.85.9.3.15.5.25.55.4.05.15.05.85-.2 1.55z"/></svg></a>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Freshly.pk</h3>
+                <p>Empowering Pakistani Restaurants with technology and fresh ingredients.</p>
+                <div class="social-row">
+                    <a href="#">Fb</a>
+                    <a href="#">In</a>
+                    <a href="#">Wa</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about-us.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="#" onclick="openModal('employee'); return false;">Employee</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="terms.html">Terms</a>
+                <a href="privacy.html">Privacy</a>
             </div>
         </div>
-        <div class="footer-section">
-            <h3 data-en="Quick Links" data-ur="فوری لنکس">Quick Links</h3>
-            <ul>
-                <li><a href="index.html" data-en="Home" data-ur="ہوم">Home</a></li>
-                <li><a href="how-it-works.html" data-en="How It Works" data-ur="طریقہ کار">How It Works</a></li>
-                <li><a href="about-us.html" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a></li>
-                <li><a href="contact.html" data-en="Contact Us" data-ur="ہم سے رابطہ کریں">Contact Us</a></li>
-                <li><a href="#" onclick="openModal('employee'); return false;" data-en="Employee Login" data-ur="ملازم لاگ ان">Employee Login</a></li>
-            </ul>
+        <div class="copyright">
+            &copy; 2025 Freshly. Made with ❤️ in Pakistan.
         </div>
-        <div class="footer-section">
-            <h3 data-en="Legal" data-ur="قانونی">Legal</h3>
-            <ul>
-                <li><a href="privacy.html" data-en="Privacy Policy" data-ur="رازداری کی پالیسی">Privacy Policy</a></li>
-                <li><a href="terms.html" data-en="Terms of Service" data-ur="سروس کی شرائط">Terms of Service</a></li>
-                <li><a href="cookies.html" data-en="Cookie Policy" data-ur="کوکی پالیسی">Cookie Policy</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3 data-en="Contact" data-ur="رابطہ">Contact</h3>
-            <p data-en="Email: info@freshly.com" data-ur="ای میل: info@freshly.com">Email: info@freshly.com</p>
-            <p data-en="Phone: +92 300 1234567" data-ur="فون: +92 300 1234567">Phone: +92 300 1234567</p>
-            <p data-en="Address: 12-B, Gulberg III, Lahore" data-ur="پتہ: 12-بی، گلبرگ III، لاہور">Address: 12-B, Gulberg III, Lahore</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p data-en="&copy; 2025 Freshly. All rights reserved." data-ur="&copy; 2025 فریشلی۔ تمام حقوق محفوظ ہیں۔">&copy; 2025 Freshly. All rights reserved.</p>
-    </div>
-</footer>
-    <!-- Modals -->
+    </footer>
+
     <div id="signupModal" class="modal">
-        <div class="modal-content">
+        <div class="modal-content glass-card">
             <span class="close" onclick="closeModal('signup')">&times;</span>
-            <h2 data-en="Sign Up" data-ur="سائن اپ">Sign Up</h2>
+            <h2 data-en="Join Freshly" data-ur="فریشلی میں شامل ہوں">Join Freshly</h2>
             <form onsubmit="handleSignup(event)">
-                <div class="form-group">
+                <div class="input-group">
+                    <input type="text" required placeholder=" ">
                     <label data-en="Restaurant Name" data-ur="ریستوران کا نام">Restaurant Name</label>
-                    <input type="text" required placeholder="Enter restaurant name">
                 </div>
-                <div class="form-group">
-                    <label data-en="Owner Name" data-ur="مالک کا نام">Owner Name</label>
-                    <input type="text" required placeholder="Enter your name">
-                </div>
-                <div class="form-group">
+                <div class="input-group">
+                    <input type="tel" required placeholder=" ">
                     <label data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
-                    <input type="tel" required placeholder="+92 XXX XXXXXXX">
                 </div>
-                <div class="form-group">
-                    <label data-en="Email" data-ur="ای میل">Email</label>
-                    <input type="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
-                    <input type="password" required placeholder="Enter password">
-                </div>
-                <button type="submit" class="submit-btn" data-en="Create Account" data-ur="اکاؤنٹ بنائیں">Create Account</button>
-            </form>
-            <div class="modal-switch">
-                <span data-en="Already have an account?" data-ur="پہلے سے اکاؤنٹ ہے؟">Already have an account?</span>
-                <a onclick="switchModal('signup', 'login')" data-en="Login" data-ur="لاگ ان">Login</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('login')">&times;</span>
-            <h2 data-en="Login" data-ur="لاگ ان">Login</h2>
-            <form onsubmit="handleLogin(event)">
-                <div class="form-group">
-                    <label data-en="Email" data-ur="ای میل">Email</label>
-                    <input type="email" required placeholder="your@email.com">
-                </div>
-                <div class="form-group">
-                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
-                    <input type="password" required placeholder="Enter password">
-                </div>
-                <button type="submit" class="submit-btn" data-en="Login" data-ur="لاگ ان">Login</button>
-            </form>
-            <div class="modal-switch">
-                <span data-en="Don't have an account?" data-ur="اکاؤنٹ نہیں ہے؟">Don't have an account?</span>
-                <a onclick="switchModal('login', 'signup')" data-en="Sign Up" data-ur="سائن اپ">Sign Up</a>
-            </div>
-        </div>
-    </div>
-
-    <div id="employeeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('employee')">&times;</span>
-            <h2 data-en="Employee Login" data-ur="ملازم لاگ ان">Employee Login</h2>
-            <form onsubmit="handleEmployeeLogin(event)">
-                <div class="form-group">
-                    <label data-en="Employee ID" data-ur="ملازم آئی ڈی">Employee ID</label>
-                    <input type="text" required placeholder="Enter employee ID">
-                </div>
-                <div class="form-group">
-                    <label data-en="Password" data-ur="پاس ورڈ">Password</label>
-                    <input type="password" required placeholder="Enter password">
-                </div>
-                <button type="submit" class="submit-btn" data-en="Login" data-ur="لاگ ان">Login</button>
+                <button type="submit" class="btn-primary full-width">Sign Up</button>
             </form>
         </div>
     </div>
-
-    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+    
+    <div id="loginModal" class="modal">...</div> 
+    <div id="employeeModal" class="modal">...</div>
 
     <script src="script.js"></script>
 </body>
