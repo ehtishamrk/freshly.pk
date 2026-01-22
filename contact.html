@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Freshly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="hero" style="min-height: 50vh; align-items: center; justify-content: center; text-align: center;">
+        <div class="hero-text" style="max-width: 800px;">
+            <h1>
+                <span data-en="Get in Touch" data-ur="رابطہ کریں">Get in Touch</span>
+            </h1>
+            <p data-en="We are here to help you grow your business. Reach out to us for any queries." data-ur="ہم آپ کے کاروبار کو بڑھانے میں مدد کے لیے یہاں ہیں۔ کسی بھی سوال کے لیے ہم سے رابطہ کریں۔">
+                We are here to help you grow your business. Reach out to us for any queries.
+            </p>
+        </div>
+    </section>
+
+    <div class="contact-container">
+        <div class="contact-info-card reveal">
+            <h2 style="margin-bottom: 2rem;" data-en="Contact Information" data-ur="رابطہ کی معلومات">Contact Information</h2>
+            
+            <div class="info-item">
+                <div class="logo-icon" style="width: 50px; height: 50px; font-size: 1.2rem;">📞</div>
+                <div>
+                    <h4 data-en="Phone" data-ur="فون">Phone</h4>
+                    <p>+92 300 1234567</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="logo-icon" style="width: 50px; height: 50px; font-size: 1.2rem;">📧</div>
+                <div>
+                    <h4 data-en="Email" data-ur="ای میل">Email</h4>
+                    <p>info@freshly.com</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="logo-icon" style="width: 50px; height: 50px; font-size: 1.2rem;">📍</div>
+                <div>
+                    <h4 data-en="Address" data-ur="پتہ">Address</h4>
+                    <p>12-B, Gulberg III, Lahore, Pakistan</p>
+                </div>
+            </div>
+
+            <div style="width: 100%; height: 250px; background: #eee; border-radius: 10px; margin-top: 2rem; overflow: hidden;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27213.9213123!2d74.329375!3d31.5042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919046c3b6f1201%3A0x67399432628469!2sGulberg%20III%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1648000000000!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+        <div class="contact-form reveal">
+            <h2 style="color: var(--dark); margin-bottom: 2rem;" data-en="Send us a Message" data-ur="ہمیں پیغام بھیجیں">Send us a Message</h2>
+            <form>
+                <div class="form-group">
+                    <label data-en="Your Name" data-ur="آپ کا نام">Your Name</label>
+                    <input type="text" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                    <label data-en="Restaurant Name" data-ur="ریستوران کا نام">Restaurant Name</label>
+                    <input type="text" placeholder="Tasty Bites">
+                </div>
+                <div class="form-group">
+                    <label data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
+                    <input type="tel" placeholder="+92 ...">
+                </div>
+                <div class="form-group">
+                    <label data-en="Message" data-ur="پیغام">Message</label>
+                    <textarea style="width: 100%; padding: 1rem; border: 2px solid var(--primary); border-radius: 10px; height: 150px; font-family: inherit;" placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="cta-btn" style="width: 100%;" data-en="Send Message" data-ur="پیغام بھیجیں">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">...</div> <div id="loginModal" class="modal">...</div>
+    <div id="employeeModal" class="modal">...</div>
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+    <script src="script.js"></script>
+</body>
+</html>
