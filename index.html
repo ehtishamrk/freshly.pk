@@ -3,237 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freshly - The Future of Restaurant Supply</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    </head>
-<body>
+    <title>Freshly | Enterprise Supply Chain Partner</title>
     
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <div class="logo-icon">🌿</div>
-                <span class="logo-text">Freshly</span>
-            </a>
-            
-            <div class="hamburger">
-                <span></span><span></span><span></span>
-            </div>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-            <div class="nav-links">
-                <a href="index.html" class="active" data-en="Home" data-ur="ہوم">Home</a>
-                <a href="how-it-works.html" data-en="Process" data-ur="طریقہ کار">Process</a>
-                <a href="about-us.html" data-en="Our Story" data-ur="ہماری کہانی">Our Story</a>
-                <a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a>
-                <div class="nav-buttons">
-                    <button class="lang-toggle" onclick="toggleLanguage()">
-                        <span class="lang-text">اردو</span>
-                    </button>
-                    <a href="#" onclick="openModal('signup'); return false;" class="cta-btn pulse-btn" data-en="Get Started" data-ur="شروع کریں">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero-section">
-        <div class="organic-blob blob-1"></div>
-        <div class="organic-blob blob-2"></div>
-        
-        <div class="hero-container">
-            <div class="hero-content reveal-left">
-                <div class="badge" data-en="#1 Restaurant Supply Chain" data-ur="#1 ریسٹورنٹ سپلائی چین">#1 Restaurant Supply Chain</div>
-                <h1>
-                    <span data-en="Supply Chain" data-ur="سپلائی چین">Supply Chain</span> <br>
-                    <span class="gradient-text" data-en="Simplified." data-ur="آسان بنا دی گئی۔">Simplified.</span>
-                </h1>
-                <p data-en="Stop juggling 5 different vendors. We deliver fresh produce, meat, and spices daily before you even open your doors. 24-hour credit available." data-ur="5 مختلف وینڈرز کے چکر لگانا بند کریں۔ ہم آپ کے دروازے کھلنے سے پہلے ہی تازہ سبزیاں، گوشت اور مصالحے فراہم کرتے ہیں۔ 24 گھنٹے کریڈٹ دستیاب ہے۔">
-                    Stop juggling 5 different vendors. We deliver fresh produce, meat, and spices daily before you even open your doors.
-                </p>
-                <div class="hero-actions">
-                    <button class="btn-primary" onclick="openModal('signup')" data-en="Start Ordering Now" data-ur="آرڈر شروع کریں">Start Ordering Now</button>
-                    <a href="how-it-works.html" class="btn-text" data-en="See how it works →" data-ur="یہ کیسے کام کرتا ہے →">See how it works →</a>
-                </div>
-                
-                <div class="trust-badges">
-                    <div class="trust-item">
-                        <span class="trust-number">500+</span>
-                        <span class="trust-label" data-en="Restaurants" data-ur="ریستوران">Restaurants</span>
-                    </div>
-                    <div class="trust-item">
-                        <span class="trust-number">99%</span>
-                        <span class="trust-label" data-en="On-Time" data-ur="وقت پر">On-Time</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="hero-visual reveal-right">
-                <div class="glass-card main-card">
-                    <div class="card-header">
-                        <div class="circle red"></div>
-                        <div class="circle yellow"></div>
-                        <div class="circle green"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="order-row">
-                            <span class="icon">🍗</span>
-                            <div class="details">
-                                <span data-en="Fresh Chicken (40kg)" data-ur="تازہ چکن">Fresh Chicken (40kg)</span>
-                                <small data-en="Delivered 8:00 AM" data-ur="8:00 بجے پہنچایا گیا">Delivered 8:00 AM</small>
-                            </div>
-                            <span class="status success">Done</span>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">FRESHLY.</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                    <li><a href="how-it-works.html" data-i18n="nav_how">How It Works</a></li>
+                    <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="#" data-modal-target="login-modal" data-i18n="nav_login">Login</a></li>
+                    <li>
+                        <div class="lang-toggle-wrapper" id="lang-toggle">
+                            <span class="lang-label">EN</span>
                         </div>
-                        <div class="order-row">
-                            <span class="icon">🥦</span>
-                            <div class="details">
-                                <span data-en="Vegetables Mix" data-ur="سبزیاں">Vegetables Mix</span>
-                                <small data-en="Delivered 8:00 AM" data-ur="8:00 بجے پہنچایا گیا">Delivered 8:00 AM</small>
-                            </div>
-                            <span class="status success">Done</span>
-                        </div>
-                        <div class="floating-price-tag">
-                            <span data-en="Save 15% Monthly" data-ur="15% بچت">Save 15% Monthly</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="custom-shape-divider-bottom-16789">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
+                    </li>
+                    <li><a href="#" class="btn" data-modal-target="signup-modal" data-i18n="btn_start">Get Started</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="bento-section">
-        <div class="section-header text-center">
-            <h2 data-en="Why Upgrade to Freshly?" data-ur="فریشلی کیوں منتخب کریں؟">Why Upgrade to Freshly?</h2>
-            <p data-en="The modern way to manage your restaurant kitchen." data-ur="اپنے ریسٹورنٹ کچن کو منظم کرنے کا جدید طریقہ۔">The modern way to manage your restaurant kitchen.</p>
+    <section class="hero">
+        <div class="container hero-content reveal">
+            <h1 data-i18n="hero_title">One Partner. Infinite Freshness.</h1>
+            <p data-i18n="hero_sub">We replace your chaotic vendor list with a single, reliable supply chain. 24-hour credit available.</p>
+            <br>
+            <a href="#" class="btn" data-modal-target="signup-modal" data-i18n="btn_start">Start Ordering</a>
         </div>
-        
-        <div class="bento-grid">
-            <div class="bento-card large-card reveal-up">
-                <div class="bento-content">
-                    <div class="bento-icon">🚀</div>
-                    <h3 data-en="One Order, Everything Sorted" data-ur="ایک آرڈر، سب کچھ مکمل">One Order, Everything Sorted</h3>
-                    <p data-en="Chicken, spices, veggies, and packaging. We bring the entire wholesale market to your doorstep with a single click." data-ur="چکن، مصالحے، سبزیاں اور پیکیجنگ۔ ہم ایک کلک کے ساتھ پوری ہول سیل مارکیٹ آپ کے دروازے پر لاتے ہیں۔">Chicken, spices, veggies, and packaging. We bring the entire wholesale market to your doorstep.</p>
-                </div>
-                <div class="bento-bg-pattern"></div>
-            </div>
+    </section>
 
-            <div class="bento-card medium-card color-accent reveal-up" style="transition-delay: 0.1s;">
-                <div class="bento-content">
-                    <div class="bento-icon">💳</div>
-                    <h3 data-en="24H Credit" data-ur="24 گھنٹے کریڈٹ">24H Credit</h3>
-                    <p data-en="Cash flow tight? Pay us after you sell." data-ur="پیسوں کی کمی؟ بیچنے کے بعد ہمیں ادائیگی کریں۔">Cash flow tight? Pay us after you sell.</p>
-                </div>
+    <section class="container reveal">
+        <div class="section-header">
+            <h2>Built for Operations</h2>
+            <p>Running a restaurant is hard. Sourcing shouldn't be.</p>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div class="icon-box">📦</div>
+                <h3 data-i18n="feat_1_title">Single Partner</h3>
+                <p data-i18n="feat_1_desc">Chicken, vegetables, spices, and packaging—all from one verified source.</p>
             </div>
-
-            <div class="bento-card medium-card reveal-up" style="transition-delay: 0.2s;">
-                <div class="bento-content">
-                    <div class="bento-icon">📉</div>
-                    <h3 data-en="Wholesale Rates" data-ur="ہول سیل ریٹ">Wholesale Rates</h3>
-                    <p data-en="We buy in bulk so you save big." data-ur="ہم بڑی مقدار میں خریدتے ہیں تاکہ آپ کی بچت ہو۔">We buy in bulk so you save big.</p>
-                </div>
+            <div class="card">
+                <div class="icon-box">⏱️</div>
+                <h3 data-i18n="feat_2_title">24h Credit Facility</h3>
+                <p data-i18n="feat_2_desc">Keep your cash flow healthy. Get supplies today, pay tomorrow (3.5% surcharge).</p>
+            </div>
+            <div class="card">
+                <div class="icon-box">💰</div>
+                <h3 data-i18n="feat_3_title">Wholesale Prices</h3>
+                <p data-i18n="feat_3_desc">Pay cash and beat market wholesale rates. Guaranteed below market rates.</p>
             </div>
         </div>
     </section>
 
-    <section class="timeline-section">
-        <div class="section-header text-center">
-            <h2 data-en="How It Works" data-ur="طریقہ کار">How It Works</h2>
-        </div>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-            
-            <div class="timeline-item reveal-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="step-num">01</span>
-                    <h3 data-en="Order at Night" data-ur="رات کو آرڈر کریں">Order at Night</h3>
-                    <p data-en="Place your order via WhatsApp or App between 9 PM - 1 AM." data-ur="رات 9 سے 1 بجے کے درمیان واٹس ایپ یا ایپ کے ذریعے اپنا آرڈر دیں۔">Place your order via WhatsApp or App between 9 PM - 1 AM.</p>
-                </div>
+    <section class="bg-mint reveal">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Enterprises</h2>
             </div>
-
-            <div class="timeline-item reveal-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="step-num">02</span>
-                    <h3 data-en="We Source Fresh" data-ur="ہم تازہ خریدتے ہیں">We Source Fresh</h3>
-                    <p data-en="Our team hits the Mandi while you sleep to pick the best." data-ur="ہماری ٹیم آپ کے سوتے وقت منڈی سے بہترین چیزیں چنتی ہے۔">Our team hits the Mandi while you sleep to pick the best.</p>
-                </div>
+            <div class="grid-3">
+                 <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Kitchen" style="width:100%; border-radius:8px;">
+                 <img src="https://images.unsplash.com/photo-1606859191214-25806e8e2423?auto=format&fit=crop&w=800&q=80" alt="Vegetables" style="width:100%; border-radius:8px;">
+                 <img src="https://images.unsplash.com/photo-1587578932405-7c740a76a423?auto=format&fit=crop&w=800&q=80" alt="Logistics" style="width:100%; border-radius:8px;">
             </div>
-
-            <div class="timeline-item reveal-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content glass-card">
-                    <span class="step-num">03</span>
-                    <h3 data-en="Morning Delivery" data-ur="صبح کی ڈیلیوری">Morning Delivery</h3>
-                    <p data-en="Supplies arrive at your kitchen before your chefs do." data-ur="آپ کے شیف کے آنے سے پہلے سامان آپ کے کچن میں پہنچ جاتا ہے۔">Supplies arrive at your kitchen before your chefs do.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="final-cta">
-        <div class="cta-box reveal-up">
-            <h2 data-en="Ready to fix your supply chain?" data-ur="اپنی سپلائی چین کو ٹھیک کرنے کے لیے تیار ہیں؟">Ready to fix your supply chain?</h2>
-            <p data-en="Join 100+ Smart Restaurants in Pakistan." data-ur="پاکستان میں 100+ ہوشیار ریستورانوں میں شامل ہوں۔">Join 100+ Smart Restaurants in Pakistan.</p>
-            <button class="btn-white pulse-btn" onclick="openModal('signup')" data-en="Create Free Account" data-ur="مفت اکاؤنٹ بنائیں">Create Free Account</button>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <h3>Freshly.pk</h3>
-                <p>Empowering Pakistani Restaurants with technology and fresh ingredients.</p>
-                <div class="social-row">
-                    <a href="#">Fb</a>
-                    <a href="#">In</a>
-                    <a href="#">Wa</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>FRESHLY.</h3>
+                    <p>Modernizing the food supply chain.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="how-it-works.html" data-i18n="nav_how">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer_privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer_terms">Terms of Use</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Internal</h4>
+                    <ul>
+                        <li><a href="#" data-modal-target="employee-modal" data-i18n="footer_emp">Employee Login</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-col">
-                <h4>Company</h4>
-                <a href="about-us.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="#" onclick="openModal('employee'); return false;">Employee</a>
+            <div class="footer-bottom">
+                <p>A project of ABCD Venture. &copy; 2024 Freshly.</p>
             </div>
-            <div class="footer-col">
-                <h4>Legal</h4>
-                <a href="terms.html">Terms</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
-        </div>
-        <div class="copyright">
-            &copy; 2025 Freshly. Made with ❤️ in Pakistan.
         </div>
     </footer>
 
-    <div id="signupModal" class="modal">
-        <div class="modal-content glass-card">
-            <span class="close" onclick="closeModal('signup')">&times;</span>
-            <h2 data-en="Join Freshly" data-ur="فریشلی میں شامل ہوں">Join Freshly</h2>
-            <form onsubmit="handleSignup(event)">
-                <div class="input-group">
-                    <input type="text" required placeholder=" ">
-                    <label data-en="Restaurant Name" data-ur="ریستوران کا نام">Restaurant Name</label>
+    <div class="modal-overlay" id="login-modal">
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <h2>Client Login</h2>
+            <form>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="0300-1234567">
                 </div>
-                <div class="input-group">
-                    <input type="tel" required placeholder=" ">
-                    <label data-en="Phone Number" data-ur="فون نمبر">Phone Number</label>
-                </div>
-                <button type="submit" class="btn-primary full-width">Sign Up</button>
+                <button type="submit" class="btn" style="width:100%">Login</button>
             </form>
         </div>
     </div>
-    
-    <div id="loginModal" class="modal">...</div> 
-    <div id="employeeModal" class="modal">...</div>
 
-    <script src="script.js"></script>
+    <div class="modal-overlay" id="signup-modal">
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <h2>Partner Request</h2>
+            <p style="font-size:0.9rem; margin-bottom:20px;">We verify all restaurants before activation.</p>
+            <form>
+                <div class="form-group">
+                    <label>Restaurant Name</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Manager Name</label>
+                    <input type="text">
+                </div>
+                <button type="submit" class="btn" style="width:100%">Request Access</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="employee-modal">
+        <div class="modal">
+            <span class="close-modal">&times;</span>
+            <h2>Employee Portal</h2>
+            <form>
+                <div class="form-group">
+                    <label>Employee ID</label>
+                    <input type="text">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <button type="submit" class="btn" style="width:100%">Access System</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/lang.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
