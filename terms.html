@@ -15,21 +15,29 @@
 <meta property="og:type" content="website">
 </head>
 <body>
-    <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <div class="logo-icon">🌿</div>
-                <span>Freshly</span>
-            </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="how-it-works.html">How It Works</a>
-                <a href="about-us.html">About Us</a>
-                <a href="#" onclick="openModal('signup'); return false;" class="cta-btn">Get Started</a>
-                <button class="lang-toggle" onclick="toggleLanguage()">اردو</button>
-            </div>
+   <nav id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <div class="logo-icon">🌿</div>
+            <span data-en="Freshly" data-ur="فریشلی">Freshly</span>
         </div>
-    </nav>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" data-en="Home" data-ur="ہوم">Home</a>
+            <a href="how-it-works.html" data-en="How It Works" data-ur="طریقہ کار">How It Works</a>
+            <a href="about-us.html" data-en="About Us" data-ur="ہمارے بارے میں">About Us</a>
+            <a href="contact.html" data-en="Contact" data-ur="رابطہ">Contact</a>
+            <a href="#" onclick="openModal('signup'); return false;" class="cta-btn" data-en="Get Started" data-ur="شروع کریں">Get Started</a>
+            <button class="lang-toggle" onclick="toggleLanguage()">اردو</button>
+        </div>
+    </div>
+</nav>
 
     <section class="hero">
         <div style="max-width: 1200px; margin: 0 auto;">
