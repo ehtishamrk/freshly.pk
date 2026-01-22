@@ -36,10 +36,11 @@ body.urdu {
     direction: rtl;
 }
 
-/* Visibility Logic */
-[data-ur] { display: none !important; }
-body.urdu [data-en] { display: none !important; }
-body.urdu [data-ur] { display: inline !important; }
+/* Add/Keep only this */
+body.urdu {
+    font-family: 'Noto Nastaliq Urdu', serif;
+    direction: rtl;
+}
 
 /* --- 2. NAVBAR (GLASSMORPHISM) --- */
 nav {
